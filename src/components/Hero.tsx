@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 import bgImage from '/assets/img/backhero.png';
-import appStoreButton from '/assets/img/photos/button-appstore.svg';
-import googlePlayButton from '/assets/img/photos/button-google-play.svg';
+// import appStoreButton from '/assets/img/photos/button-appstore.svg';
+// import googlePlayButton from '/assets/img/photos/button-google-play.svg';
 import type { sectionProps } from '../types/common';
 
 // Enregistrer le plugin GSAP
