@@ -1,0 +1,197 @@
+:root {
+  /* Nouvelle palette de couleurs */
+  --bs-primary: #00C4CC;
+  --bs-primary-rgb: 0, 196, 204;
+  --bs-secondary: #000000;
+  --bs-secondary-rgb: 0, 0, 0;
+  --bs-accent1: #FFC107;
+  --bs-accent1-rgb: 255, 193, 7;
+  --bs-accent2: #76FF03;
+  --bs-accent2-rgb: 118, 255, 3;
+  --bs-neutral: #424242;
+  --bs-neutral-rgb: 66, 66, 66;
+  --bs-light-bg: #B0BEC5;
+  --bs-light-bg-rgb: 176, 190, 197;
+  
+  /* Remplacements des couleurs existantes */
+  --bs-blue: var(--bs-primary);
+  --bs-blue-rgb: var(--bs-primary-rgb);
+  --bs-grape: var(--bs-primary);
+  --bs-grape-rgb: var(--bs-primary-rgb);
+  --bs-navy: var(--bs-secondary);
+  --bs-navy-rgb: var(--bs-secondary-rgb);
+  --bs-yellow: var(--bs-accent1);
+  --bs-yellow-rgb: var(--bs-accent1-rgb);
+  --bs-green: var(--bs-accent2);
+  --bs-green-rgb: var(--bs-accent2-rgb);
+  --bs-ash: var(--bs-neutral);
+  --bs-ash-rgb: var(--bs-neutral-rgb);
+  --bs-gray: var(--bs-light-bg);
+  --bs-gray-rgb: var(--bs-light-bg-rgb);
+  
+  /* Couleurs dérivées */
+  --bs-link-color-rgb: var(--bs-primary-rgb);
+  --bs-link-hover-color-rgb: var(--bs-primary-rgb);
+  
+  /* Couleurs douces */
+  --bs-soft-primary: rgba(0, 196, 204, 0.1);
+  --bs-soft-blue: rgba(0, 196, 204, 0.1);
+  --bs-soft-yellow: rgba(255, 193, 7, 0.1);
+  --bs-soft-green: rgba(118, 255, 3, 0.1);
+  --bs-soft-ash: rgba(66, 66, 66, 0.1);
+  
+  /* Couleurs pâles */
+  --bs-pale-primary: rgba(0, 196, 204, 0.2);
+  --bs-pale-blue: rgba(0, 196, 204, 0.2);
+  --bs-pale-yellow: rgba(255, 193, 7, 0.2);
+  --bs-pale-green: rgba(118, 255, 3, 0.2);
+  --bs-pale-ash: rgba(66, 66, 66, 0.2);
+  
+  /* Couleurs de remplissage d'icônes */
+  --bs-icon-fill-primary: rgba(0, 196, 204, 0.7);
+  --bs-icon-fill-blue: rgba(0, 196, 204, 0.7);
+  --bs-icon-fill-yellow: rgba(255, 193, 7, 0.7);
+  --bs-icon-fill-green: rgba(118, 255, 3, 0.7);
+  --bs-icon-fill-ash: rgba(66, 66, 66, 0.7);
+  
+  /* Couleurs de bordure */
+  --bs-border-soft-primary: rgba(0, 196, 204, 0.3);
+  --bs-border-soft-blue: rgba(0, 196, 204, 0.3);
+  --bs-border-soft-yellow: rgba(255, 193, 7, 0.3);
+  --bs-border-soft-green: rgba(118, 255, 3, 0.3);
+  --bs-border-soft-ash: rgba(66, 66, 66, 0.3);
+}
+
+/* Styles pour les boutons */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--bs-accent1);
+  border-color: var(--bs-accent1);
+}
+
+.btn-success {
+  background-color: var(--bs-accent2);
+  border-color: var(--bs-accent2);
+}
+
+/* Styles pour les textes */
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.text-secondary {
+  color: var(--bs-secondary) !important;
+}
+
+.text-accent1 {
+  color: var(--bs-accent1) !important;
+}
+
+.text-accent2 {
+  color: var(--bs-accent2) !important;
+}
+
+.text-neutral {
+  color: var(--bs-neutral) !important;
+}
+
+/* Styles pour les arrière-plans */
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--bs-secondary) !important;
+}
+
+.bg-accent1 {
+  background-color: var(--bs-accent1) !important;
+}
+
+.bg-accent2 {
+  background-color: var(--bs-accent2) !important;
+}
+
+.bg-neutral {
+  background-color: var(--bs-neutral) !important;
+}
+
+.bg-light-custom {
+  background-color: var(--bs-light-bg) !important;
+}
+
+/* Styles pour les gradients */
+.text-gradient.gradient-7 {
+  background: linear-gradient(to right, var(--bs-primary), var(--bs-accent1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Styles pour les cartes */
+.card {
+  border-color: var(--bs-border-soft-primary);
+}
+
+.card-header {
+  background-color: var(--bs-soft-primary);
+}
+
+/* Styles pour les liens */
+a {
+  color: var(--bs-primary);
+}
+
+a:hover {
+  color: var(--bs-accent1);
+}
+
+/* Styles pour les icônes */
+.icon-svg.solid.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.icon-svg.solid.text-accent1 {
+  color: var(--bs-accent1) !important;
+}
+
+.icon-svg.solid.text-accent2 {
+  color: var(--bs-accent2) !important;
+}
+
+/* Styles pour les puces */
+.bullet-bg.bullet-soft-primary span.bullet {
+  background-color: var(--bs-soft-primary);
+}
+
+.bullet-bg.bullet-soft-accent1 span.bullet {
+  background-color: var(--bs-soft-accent1);
+}
+
+.bullet-bg.bullet-soft-accent2 span.bullet {
+  background-color: var(--bs-soft-accent2);
+}
+
+/* Styles pour le conteneur principal */
+.content-wrapper {
+  padding-left: 1.5rem;
+  padding-right: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    
+  }
+}
+
+@media (min-width: 992px) {
+  .content-wrapper {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
