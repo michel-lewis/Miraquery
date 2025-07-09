@@ -55,7 +55,7 @@ const App: React.FC = () => {
         <Testimonials />
         <Contact />
         <Pricing id="pricing" />
-        <FAQ id="faq" />
+        <Faq id="faq" />
         <Footer />
 
         <div className="progress-wrap">
