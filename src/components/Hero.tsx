@@ -1,10 +1,9 @@
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
-import bgImage from '/assets/img/backhero.png'; // Adjust path
-// import doodle1 from '/assets/img/svg/doodle1.svg';
-// import doodle2 from '/assets/img/svg/doodle2.svg';
+import bgImage from '/assets/img/backhero.png';
 import appStoreButton from '/assets/img/photos/button-appstore.svg';
 import googlePlayButton from '/assets/img/photos/button-google-play.svg';
 import type { sectionProps } from '../types/common';
@@ -13,7 +12,6 @@ import type { sectionProps } from '../types/common';
 gsap.registerPlugin(TextPlugin);
 
 const Hero: React.FC<sectionProps> = ({ id }) => {
-  // Références pour les éléments animés avec GSAP
   const queryTextRef = useRef<HTMLDivElement>(null);
   const sqlCodeRef = useRef<HTMLDivElement>(null);
   const jsonResultRef = useRef<HTMLDivElement>(null);
@@ -22,7 +20,6 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
   const connectionLineRef = useRef<SVGPathElement>(null);
   const animationContainerRef = useRef<HTMLDivElement>(null);
 
-  // Animation variants pour Framer Motion
   const fadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.8, delay: 0.3 } },
@@ -38,11 +35,9 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 1.8 } },
   };
 
-  // Animation GSAP
   useEffect(() => {
     const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 
-    // Étape 1 : Effet typewriter pour la requête
     tl.to(queryTextRef.current, {
       opacity: 1,
       duration: 2,
@@ -50,7 +45,6 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
       ease: "none",
     });
 
-    // Étape 2 : Transformation en SQL
     tl.to(queryTextRef.current, { opacity: 0, duration: 0.5 }).to(sqlCodeRef.current, {
       opacity: 1,
       duration: 2,
@@ -58,14 +52,12 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
       ease: "none",
     });
 
-    // Étape 3 : Ligne de connexion
     tl.to(connectionLineRef.current, {
       strokeDashoffset: 0,
       duration: 1,
       ease: "power2.inOut",
     }, "-=1");
 
-    // Étape 4 : Particules
     const particles: HTMLDivElement[] = [];
     for (let i = 0; i < 15; i++) {
       const particle = document.createElement("div");
@@ -81,7 +73,6 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
       }, "-=0.5");
     }
 
-    // Étape 5 : Résultats JSON
     tl.to(particles, { opacity: 0, duration: 0.5 })
       .to(sqlCodeRef.current, { opacity: 0, duration: 0.5 })
       .to(jsonResultRef.current, {
@@ -99,7 +90,6 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
         ease: "none",
       });
 
-    // Étape 6 : Résumé (prolongé à 3 secondes)
     tl.to(jsonResultRef.current, { opacity: 0, duration: 0.5 }).to(summaryRef.current, {
       opacity: 1,
       duration: 4,
@@ -107,12 +97,10 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
       ease: "none",
     });
 
-    // Étape 7 : Apparition du logo
     tl.to(summaryRef.current, { opacity: 0, duration: 0.5 })
       .to(logoRef.current, { opacity: 1, duration: 1, y: -20 })
       .to(logoRef.current, { opacity: 0, duration: 1, delay: 1 });
 
-    // Nettoyage au démontage
     return () => {
       tl.kill();
       particles.forEach((particle) => particle.remove());
@@ -133,16 +121,16 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
         <div className="row gx-0 gy-10 align-items-start text-center text-lg-start">
           <div className="col-lg-6 col-xxl-5 position-relative">
             <motion.h1
-              className="display-1 fs-50 mb-4"
+              className="display-1 fs-50 mb-4 text-white"
               variants={fadeIn}
               initial="hidden"
               animate="visible"
             >
               Transformez vos données avec{' '}
-              <span className="text-gradient gradient-7">Mira AI.</span>
+              <span className="text-white">Mira AI.</span>
             </motion.h1>
             <motion.p
-              className="lead fs-24 lh-sm mb-7"
+              className="lead fs-24 lh-sm mb-7 text-white"
               variants={fadeIn}
               initial="hidden"
               animate="visible"
@@ -155,7 +143,7 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
               initial="hidden"
               animate="visible"
             >
-              <span>
+              {/* <span>
                 <a href="#" className="me-2">
                   <img src={appStoreButton} className="h-11 rounded-xl" alt="" />
                 </a>
@@ -164,7 +152,7 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
                 <a href="#">
                   <img src={googlePlayButton} className="h-11 rounded-xl" alt="" />
                 </a>
-              </span>
+              </span> */}
             </motion.div>
           </div>
           <motion.div
@@ -271,7 +259,6 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
         </div>
       </div>
 
-      {/* Styles intégrés */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
         .animation-container {
