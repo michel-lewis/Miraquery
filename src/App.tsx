@@ -6,7 +6,7 @@ import HowItWorks from "./components/HowItWorks";
 import Faq from "./components/Faq";
 import WhyChoose from "./components/WhyChoose";
 import Testimonials from "./components/Testimonial";
-import CallToAction from "./components/CallToAction";
+// import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Pricing from "./components/Pricing";

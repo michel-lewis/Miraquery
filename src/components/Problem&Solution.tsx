@@ -4,10 +4,10 @@ import type { sectionProps } from '../types/common';
 
 const ProblemSolution: React.FC<sectionProps> = ({ id }) => {
   // Animation variants
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.8, delay: 0.3 } },
-  };
+//   const fadeIn = {
+//     hidden: { opacity: 0 },
+//     visible: { opacity: 1, transition: { duration: 0.8, delay: 0.3 } },
+//   };
 
   const slideInRight = {
     hidden: { opacity: 0, x: -50 },
