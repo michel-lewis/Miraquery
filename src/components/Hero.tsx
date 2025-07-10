@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import bgImage from '/assets/img/photos/bg23.png'; // Adjust path based on your project structure
+// import bgImage from '/assets/img/photos/bg23.png'; // Adjust path based on your project structure
 import doodle1 from '/assets/img/svg/doodle1.svg';
 import doodle2 from '/assets/img/svg/doodle2.svg';
 import appStoreButton from '/assets/img/photos/button-appstore.svg';
 import googlePlayButton from '/assets/img/photos/button-google-play.svg';
-import devicesImage from '/assets/img/photos/devices3.png';
-import devicesImage2x from '/assets/img/photos/devices3@2x.png';
+// import devicesImage from '/assets/img/photos/devices3.png';
+// import devicesImage2x from '/assets/img/photos/devices3@2x.png';
 import type { sectionProps } from '../types/common';
 
 const Hero: React.FC<sectionProps> = ({id}) => {
