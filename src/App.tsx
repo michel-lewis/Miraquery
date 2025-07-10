@@ -52,7 +52,7 @@ const App: React.FC = () => {
         <KeyFeatures id="key-features" />
         <HowItWorks id="how-it-works" />
         <WhyChoose />
-        {/* <Testimonials /> */}
+        <Testimonials />
         <Contact />
         <Pricing id="pricing" />
         <Faq id="faq" />
