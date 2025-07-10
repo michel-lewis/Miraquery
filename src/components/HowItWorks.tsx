@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { sectionProps } from '../types/common';
 
@@ -57,17 +56,17 @@ const HowItWorks: React.FC<sectionProps> = ({id}) => {
       <div className="container pb-14 pb-md-16">
         <div className="row text-center">
           <div className="col-md-10 col-lg-7 mx-auto position-relative">
-            <img src="/assets/img/svg/doodle5.svg" className="w-15 position-absolute d-none d-lg-block" style={{ bottom: '-60%', right: '10%' }} alt="Doodle" />
+            <img src="/assets/img/svg/doodle5.svg" className="w-15 position-absolute d-none d-lg-block" style={{ right: '10%' }} alt="Doodle" />
             <img src="/assets/img/svg/doodle6.svg" className="h-15 position-absolute d-none d-lg-block" style={{ top: '-40%', left: '-5%' }} alt="Doodle" />
             <h2 className="fs-16 text-uppercase text-secondary mb-3 mt-5">How It Works</h2>
             <h3 className="display-3 mb-8 px-xl-6">Download the app, create your profile and <span className="text-accent1">voilà</span>, you're all set!</h3>
           </div>
         </div>
-        <div className="row mb-lg-20 mb-xl-23">
+        <div className="row">
           <div className="col-xxl-11 mx-auto">
             <div className="row gy-10 gy-lg-0 text-center d-flex align-items-center">
               <div className="col-md-6 col-lg-4 mx-auto mb-n10 mb-lg-0">
-                <figure className="mx-auto"><img src="/assets/img/photos/devices4.png" srcSet="/assets/img/photos/devices4@2x.png 2x" alt="Devices" /></figure>
+                <figure className="mx-auto"><img src="/assets/img/howitwork.png" srcSet="/assets/img/howitwork.png 2x" alt="Devices" /></figure>
               </div>
               <div className="w-100 d-lg-none"></div>
               <div className="col-md-6 col-lg-4 order-lg-first">

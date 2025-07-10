@@ -175,7 +175,7 @@ a:hover {
   background-color: var(--bs-soft-accent2);
 }
 
-/* Styles pour le conteneur principal */
+/* Styles pour le conteneur principal
 .content-wrapper {
   padding-left: 1.5rem;
   padding-right: 1.5em;
@@ -194,4 +194,4 @@ a:hover {
     padding-right: 3rem;
     padding-left: 3rem;
   }
-}
+} */

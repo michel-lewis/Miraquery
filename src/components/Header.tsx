@@ -48,16 +48,16 @@ const Header: React.FC = () => {
                 src="/assets/img/miraquery.png" 
                 srcSet="/assets/img/miraquery.png 2x" 
                 alt="Logo" 
-                style={{ maxWidth: '150px' }} // Reduced logo size
+                style={{ maxWidth: '150px' }}
               />
             </a>
           </div>
           <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
             <div className="offcanvas-header d-lg-none">
-              <h3 className="text-secondary fs-30 mb-0">MiraQuery</h3>
-              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <h3 className="text-black fs-30 mb-0">MiraQuery</h3>
+              <button type="button" className="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+            <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100 text-black">
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <a
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
                 <div>
                   <a href="mailto:contact@korva.com" className="link-inverse">contact@korva.com</a>
                   <br /> 00 (123) 456 78 90 <br />
-                  <nav className="nav social social-white mt-4">
+                  <nav className="nav social social-black mt-4">
                     {socialItems.map((social, index) => (
                       <a href={social.url} key={index}>
                         <i className={`uil uil-${social.icon}`}></i>
@@ -149,22 +149,22 @@ const Header: React.FC = () => {
           </div>
         </div>
       </nav>
-      <div className="offcanvas offcanvas-end text-inverse" id="offcanvas-info" data-bs-scroll="true">
+      <div className="offcanvas offcanvas-end text-black" id="offcanvas-info" data-bs-scroll="true">
         <div className="offcanvas-header">
-          <h3 className="text-secondary fs-30 mb-0">MiraQuery</h3>
-          <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <h3 className="text-black fs-30 mb-0">MiraQuery</h3>
+          <button type="button" className="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body pb-6">
           <div className="widget mb-8">
-            <p className="text-primary">MiraQuery transforms natural language into SQL and MongoDB queries using Grok's AI, making data access simple and fast for everyone.</p>
+            <p className="text-black">MiraQuery transforms natural language into SQL and MongoDB queries using Grok's AI, making data access simple and fast for everyone.</p>
           </div>
           <div className="widget mb-8">
-            <h4 className="widget-title text-secondary mb-3">Contact Info</h4>
+            <h4 className="widget-title text-black mb-3">Contact Info</h4>
             <address> Moonshine St. 14/05 <br /> Light City, London </address>
-            <a href="mailto:contact@korva.com">contact@korva.com</a><br /> 00 (123) 456 78 90
+            <a href="mailto:contact@korva.com" className="link-inverse">contact@korva.com</a><br /> 00 (123) 456 78 90
           </div>
           <div className="widget mb-8">
-            <h4 className="widget-title text-secondary mb-3">Learn More</h4>
+            <h4 className="widget-title text-black mb-3">Learn More</h4>
             <ul className="list-unstyled">
               <li><a href="#problem-solution">Problem & Solution</a></li>
               <li><a href="#key-features">Key Features</a></li>
@@ -173,8 +173,8 @@ const Header: React.FC = () => {
             </ul>
           </div>
           <div className="widget">
-            <h4 className="widget-title text-secondary mb-3">Follow Us</h4>
-            <nav className="nav social">
+            <h4 className="widget-title text-black mb-3">Follow Us</h4>
+            <nav className="nav social social-black">
               {socialItems.map((social, index) => (
                 <a href={social.url} key={index}>
                   <i className={`uil uil-${social.icon}`}></i>
@@ -184,6 +184,27 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
+      <style>{`
+        .nav-link,
+        .dropdown-item,
+        .link-inverse {
+          color: black !important;
+        }
+
+        .social-black a i {
+          color: black !important;
+        }
+
+        .btn-close-dark::before {
+          color: black !important;
+        }
+
+        .hamburger span,
+        .hamburger span::before,
+        .hamburger span::after {
+          background-color: black !important;
+        }
+      `}</style>
     </header>
   );
 };

@@ -1,136 +1,74 @@
-
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { gsap } from 'gsap';
-import { TextPlugin } from 'gsap/TextPlugin';
-import bgImage from '/assets/img/backhero.png';
-// import appStoreButton from '/assets/img/photos/button-appstore.svg';
-// import googlePlayButton from '/assets/img/photos/button-google-play.svg';
+import bgImage from '/assets/img/photos/bg23.png'; // Adjust path based on your project structure
+import doodle1 from '/assets/img/svg/doodle1.svg';
+import doodle2 from '/assets/img/svg/doodle2.svg';
+import appStoreButton from '/assets/img/photos/button-appstore.svg';
+import googlePlayButton from '/assets/img/photos/button-google-play.svg';
+import devicesImage from '/assets/img/photos/devices3.png';
+import devicesImage2x from '/assets/img/photos/devices3@2x.png';
 import type { sectionProps } from '../types/common';
 
-// Enregistrer le plugin GSAP
-gsap.registerPlugin(TextPlugin);
-
-const Hero: React.FC<sectionProps> = ({ id }) => {
-  const queryTextRef = useRef<HTMLDivElement>(null);
-  const sqlCodeRef = useRef<HTMLDivElement>(null);
-  const jsonResultRef = useRef<HTMLDivElement>(null);
-  const summaryRef = useRef<HTMLDivElement>(null);
-  const logoRef = useRef<HTMLDivElement>(null);
-  const connectionLineRef = useRef<SVGPathElement>(null);
-  const animationContainerRef = useRef<HTMLDivElement>(null);
-
+const Hero: React.FC<sectionProps> = ({id}) => {
+  // Animation variants for fade-in
   const fadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.8, delay: 0.3 } },
   };
 
+  // Animation variants for slide-in-down
   const slideInDown = {
     hidden: { opacity: 0, y: -50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.6 } },
   };
 
+  // Animation variants for buttons
   const buttonsSlideIn = {
     hidden: { opacity: 0, y: -50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 1.8 } },
   };
 
-  useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-
-    tl.to(queryTextRef.current, {
-      opacity: 1,
-      duration: 2,
-      text: "Montre-moi les ventes par région",
-      ease: "none",
-    });
-
-    tl.to(queryTextRef.current, { opacity: 0, duration: 0.5 }).to(sqlCodeRef.current, {
-      opacity: 1,
-      duration: 2,
-      text: "SELECT region, SUM(sales) FROM orders GROUP BY region;",
-      ease: "none",
-    });
-
-    tl.to(connectionLineRef.current, {
-      strokeDashoffset: 0,
-      duration: 1,
-      ease: "power2.inOut",
-    }, "-=1");
-
-    const particles: HTMLDivElement[] = [];
-    for (let i = 0; i < 15; i++) {
-      const particle = document.createElement("div");
-      particle.className = "particle";
-      animationContainerRef.current?.appendChild(particle);
-      particles.push(particle);
-      tl.to(particle, {
-        x: () => Math.random() * 200 - 100,
-        y: () => Math.random() * 200 - 100,
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out",
-      }, "-=0.5");
-    }
-
-    tl.to(particles, { opacity: 0, duration: 0.5 })
-      .to(sqlCodeRef.current, { opacity: 0, duration: 0.5 })
-      .to(jsonResultRef.current, {
-        opacity: 1,
-        duration: 4,
-        text: JSON.stringify(
-          [
-            { region: "Nord", sales: 5000 },
-            { region: "Sud", sales: 3500 },
-            { region: "Est", sales: 4000 },
-          ],
-          null,
-          2
-        ),
-        ease: "none",
-      });
-
-    tl.to(jsonResultRef.current, { opacity: 0, duration: 0.5 }).to(summaryRef.current, {
-      opacity: 1,
-      duration: 4,
-      text: "Total des ventes : 12,500 €",
-      ease: "none",
-    });
-
-    tl.to(summaryRef.current, { opacity: 0, duration: 0.5 })
-      .to(logoRef.current, { opacity: 1, duration: 1, y: -20 })
-      .to(logoRef.current, { opacity: 0, duration: 1, delay: 1 });
-
-    return () => {
-      tl.kill();
-      particles.forEach((particle) => particle.remove());
-    };
-  }, []);
-
   return (
     <section
       id={id}
-      className="wrapper bg-full bg-overlay bg-overlay-light-600"
+      className="wrapper image-wrapper bg-full bg-overlay bg-overlay-light-600"
       style={{
-        backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
       <div className="container pt-16 pt-md-18 pb-9">
-        <div className="row gx-0 gy-10 align-items-start text-center text-lg-start">
+        <div className="row gx-0 gy-10 align-items-center text-center text-lg-start">
           <div className="col-lg-6 col-xxl-5 position-relative">
+            <motion.img
+              src={doodle1}
+              className="h-9 position-absolute d-none d-lg-block"
+              style={{ top: '-9%', left: '-6%' }}
+              alt=""
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 3 }} // Replaces data-cue="fadeIn" data-delay="3000"
+            />
+            <motion.img
+              src={doodle2}
+              className="h-15 position-absolute d-none d-lg-block"
+              style={{ bottom: '9%', right: '-22%' }}
+              alt=""
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 3 }} // Replaces data-cue="fadeIn" data-delay="3000"
+            />
             <motion.h1
-              className="display-1 fs-50 mb-4 text-white"
+              className="display-1 fs-50 mb-4"
               variants={fadeIn}
               initial="hidden"
               animate="visible"
             >
               Transformez vos données avec{' '}
-              <span className="text-white">Mira AI.</span>
+              <span className="text-gradient gradient-7">Mira AI</span>
             </motion.h1>
             <motion.p
-              className="lead fs-24 lh-sm mb-7 text-white"
+              className="lead fs-24 lh-sm mb-7"
               variants={fadeIn}
               initial="hidden"
               animate="visible"
@@ -143,7 +81,7 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
               initial="hidden"
               animate="visible"
             >
-              {/* <span>
+              <span>
                 <a href="#" className="me-2">
                   <img src={appStoreButton} className="h-11 rounded-xl" alt="" />
                 </a>
@@ -152,7 +90,7 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
                 <a href="#">
                   <img src={googlePlayButton} className="h-11 rounded-xl" alt="" />
                 </a>
-              </span> */}
+              </span>
             </motion.div>
           </div>
           <motion.div
@@ -161,91 +99,7 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
             initial="hidden"
             animate="visible"
           >
-            <div
-              ref={animationContainerRef}
-              className="animation-container"
-              style={{ position: 'relative', height: '200px', paddingTop: '20px' }}
-            >
-              <div
-                ref={queryTextRef}
-                className="query-text"
-                style={{
-                  fontSize: '1.5rem',
-                  opacity: 0,
-                  color: 'var(--bs-secondary)',
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 'bold',
-                }}
-              ></div>
-              <div
-                ref={sqlCodeRef}
-                className="sql-code"
-                style={{
-                  fontSize: '1.2rem',
-                  background: 'var(--bs-neutral)',
-                  padding: '10px',
-                  borderRadius: '5px',
-                  opacity: 0,
-                  color: 'var(--bs-accent2)',
-                  marginTop: '10px',
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 'bold',
-                }}
-              ></div>
-              <div
-                ref={jsonResultRef}
-                className="json-result"
-                style={{
-                  fontSize: '1.1rem',
-                  background: 'var(--bs-neutral)',
-                  padding: '10px',
-                  borderRadius: '5px',
-                  opacity: 0,
-                  color: 'var(--bs-accent1)',
-                  marginTop: '10px',
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 'bold',
-                  whiteSpace: 'pre-wrap',
-                }}
-              ></div>
-              <div
-                ref={summaryRef}
-                className="summary"
-                style={{
-                  fontSize: '1.3rem',
-                  opacity: 0,
-                  color: 'var(--bs-secondary)',
-                  marginTop: '10px',
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 'bold',
-                }}
-              ></div>
-              <div
-                ref={logoRef}
-                className="logo"
-                style={{
-                  fontSize: '2.5rem',
-                  opacity: 0,
-                  color: 'var(--bs-primary)',
-                  marginTop: '10px',
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 'bold',
-                }}
-              >
-                Mira
-              </div>
-              <svg style={{ position: 'absolute', width: '100%', height: '100%', zIndex: 0 }}>
-                <path
-                  ref={connectionLineRef}
-                  d="M100,200 Q200,100 300,200"
-                  stroke="var(--bs-accent2)"
-                  strokeWidth="2"
-                  fill="none"
-                  className="connection-line"
-                  style={{ strokeDasharray: 1000, strokeDashoffset: 1000 }}
-                />
-              </svg>
-            </div>
+        
           </motion.div>
         </div>
       </div>
@@ -258,45 +112,6 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
           </svg>
         </div>
       </div>
-
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-        .animation-container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-        }
-        .particle {
-          position: absolute;
-          width: 5px;
-          height: 5px;
-          background: var(--bs-accent2);
-          border-radius: 50%;
-          opacity: 0;
-        }
-        @media (max-width: 768px) {
-          .query-text {
-            font-size: 1.2rem !important;
-          }
-          .sql-code {
-            font-size: 1rem !important;
-          }
-          .json-result {
-            font-size: 0.9rem !important;
-          }
-          .summary {
-            font-size: 1.1rem !important;
-          }
-          .logo {
-            font-size: 2rem !important;
-          }
-          .animation-container {
-            height: 150px !important;
-            padding-top: 10px !important;
-          }
-        }
-      `}</style>
     </section>
   );
 };

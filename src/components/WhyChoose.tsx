@@ -25,13 +25,13 @@ const WhyChoose: React.FC = () => {
             <img
               src="/assets/img/svg/doodle3.svg"
               className="h-11 position-absolute d-none d-lg-block"
-              style={{ top: '-20%', right: '-12%' }}
+              style={{ right: '-12%' }} // Retrait de top: '-20%'
               alt="Doodle 3"
             />
             <img
               src="/assets/img/svg/doodle9.svg"
               className="h-17 position-absolute d-none d-lg-block"
-              style={{ bottom: '5%', left: '-17%' }}
+              style={{ left: '-17%' }} // Retrait de bottom: '5%'
               alt="Doodle 9"
             />
             <h2 className="fs-16 text-uppercase text-secondary mb-3 text-center">Why Choose Us?</h2>
@@ -40,12 +40,11 @@ const WhyChoose: React.FC = () => {
             </h3>
           </div>
         </div>
-        <div className="row d-flex align-items-start mb-19">
+        <div className="row d-flex align-items-start">
           <div className="col-lg-6 position-lg-sticky" style={{ top: '8rem' }}>
-            {/* Retiré l'image devices5.png si non pertinente pour Mira, sinon ajustez le chemin */}
-            {/* <figure>
-              <img src="/assets/img/photos/devices5.png" srcSet="/assets/img/photos/devices5@2x.png 2x" alt="Devices" />
-            </figure> */}
+             <figure>
+              <img src="/assets/img/why.png" srcSet="/assets/img/why.png 2x" alt="Devices" />
+            </figure> 
           </div>
           <div className="col-lg-6 ms-auto">
             {reasons.map((reason, index) => (

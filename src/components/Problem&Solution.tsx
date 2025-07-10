@@ -3,12 +3,6 @@ import { motion } from 'framer-motion';
 import type { sectionProps } from '../types/common';
 
 const ProblemSolution: React.FC<sectionProps> = ({ id }) => {
-  // Animation variants
-//   const fadeIn = {
-//     hidden: { opacity: 0 },
-//     visible: { opacity: 1, transition: { duration: 0.8, delay: 0.3 } },
-//   };
-
   const slideInRight = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.5 } },
@@ -38,12 +32,20 @@ const ProblemSolution: React.FC<sectionProps> = ({ id }) => {
             viewport={{ once: true }}
           >
             <div className="card shadow-lg h-100">
-              <div className="card-body p-10 p-xl-12">
-                <div className="svg-bg svg-bg-lg bg-soft-accent1 rounded-xl mb-4">
-                  <img src="/assets/img/icons/solid/alert.svg" className="icon-svg solid text-accent1" alt="Problème" />
-                </div>
+              <div className="card-body p-10 p-xl-12 d-flex flex-column">
                 <h3 className="fs-22 mb-3">Problème</h3>
+                <div className="" style={{ width: '100%', height: '300px', overflow: 'hidden' }}>
+                  <img 
+                    src="/assets/img/subquery_2b.svg" 
+                    alt="Problème" 
+                    style={{ 
+                      width: '100%', 
+                      height: '100%', 
+                    }} 
+                  />
+                </div>
                 <p className="mb-6">
+         
                   Les requêtes SQL et MongoDB sont complexes, réservées aux experts, et freinent vos analyses.
                   <span className="fw-bold"> Simplifiez votre processus dès maintenant.</span>
                 </p>
@@ -59,20 +61,18 @@ const ProblemSolution: React.FC<sectionProps> = ({ id }) => {
             viewport={{ once: true }}
           >
             <div className="card shadow-lg h-100">
-              <div className="card-body p-10 p-xl-12">
-                <div className="svg-bg svg-bg-lg bg-soft-accent2 rounded-xl mb-4">
-                  <img src="/assets/img/icons/solid/bulb.svg" className="icon-svg solid text-accent2" alt="Solution" />
-                </div>
+              <div className="card-body p-10 p-xl-12 d-flex flex-column">
+           
                 <h3 className="fs-22 mb-3">Solution</h3>
                 <p className="mb-6">
                   MiraQuery traduit vos phrases en requêtes précises grâce à l'IA, sans besoin de compétences techniques.
                   <span className="fw-bold"> Accédez à vos données en un clic.</span>
                 </p>
                 <ul className="icon-list bullet-bg bullet-soft-primary">
-                   <li><span className="bullet"></span><span>Polyvalent : SQL et NoSQL.</span></li>
-                   <li><span className="bullet"></span><span>Rapide : Résultats en 50 ms.</span></li>
-                   <li><span className="bullet"></span><span>Intuitif : API et SDK pour développeurs.</span></li>
-                 </ul>
+                  <li><span className="bullet"></span><span>Polyvalent : SQL et NoSQL.</span></li>
+                  <li><span className="bullet"></span><span>Rapide : Résultats en 50 ms.</span></li>
+                  <li><span className="bullet"></span><span>Intuitif : API et SDK pour développeurs.</span></li>
+                </ul>
                 <a href="#features" className="btn btn-primary rounded-pill mt-6">Découvrir les fonctionnalités</a>
               </div>
             </div>
