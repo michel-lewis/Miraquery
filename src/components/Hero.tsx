@@ -1,13 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, type CSSProperties } from 'react';
 import { motion } from 'framer-motion';
 // import bgImage from '/assets/img/photos/bg23.png'; // Adjust path based on your project structure
 import doodle1 from '/assets/img/svg/doodle1.svg';
 import doodle2 from '/assets/img/svg/doodle2.svg';
-// import appStoreButton from '/assets/img/photos/button-appstore.svg';
-// import googlePlayButton from '/assets/img/photos/button-google-play.svg';
+import appStoreButton from '/assets/img/photos/button-appstore.svg';
+import googlePlayButton from '/assets/img/photos/button-google-play.svg';
 // import devicesImage from '/assets/img/photos/devices3.png';
 // import devicesImage2x from '/assets/img/photos/devices3@2x.png';
 import type { sectionProps } from '../types/common';
+
+interface CustomCSSProperties extends CSSProperties {
+  '--n'?: number;
+  '--l'?: string;
+  '--t'?: string;
+  '--i'?: number;
+  '--j'?: number;
+}
 
 const Hero: React.FC<sectionProps> = ({id}) => {
   // Animation variants for fade-in
@@ -176,7 +184,7 @@ const Hero: React.FC<sectionProps> = ({id}) => {
                     }
                   }
                 `}</style>
-                <div className="grid" style={{ '--n': n, '--l': '4.5em', '--t': '6s' }}>
+                <div className="grid" style={{ '--n': n, '--l': '4.5em', '--t': '6s' } as CustomCSSProperties}>
                   {Array.from({ length: cubeCount }).map((_, index) => {
                     const i = index % n;
                     const j = Math.floor(index / n);
@@ -186,7 +194,7 @@ const Hero: React.FC<sectionProps> = ({id}) => {
                     const animationStyle = isAnimated ? { animationDelay: `${delay}s` } : {};
                     const className = `cube ${isAnimated ? 'animated' : ''}`;
                     const term = terms[index % terms.length];
-                    return <div key={index} className={className} style={{ '--i': i, '--j': j, ...animationStyle }} data-text={term} />;
+                    return <div key={index} className={className} style={{ '--i': i, '--j': j, ...animationStyle } as CustomCSSProperties} data-text={term} />;
                   })}
                 </div>
               </div>
