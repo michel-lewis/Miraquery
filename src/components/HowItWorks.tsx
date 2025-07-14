@@ -59,7 +59,7 @@ const HowItWorks: React.FC<sectionProps> = ({id}) => {
             <img src="/assets/img/svg/doodle5.svg" className="w-15 position-absolute d-none d-lg-block" style={{ right: '10%' }} alt="Doodle" />
             <img src="/assets/img/svg/doodle6.svg" className="h-15 position-absolute d-none d-lg-block" style={{ top: '-40%', left: '-5%' }} alt="Doodle" />
             <h2 className="fs-16 text-uppercase text-secondary mb-3 mt-5">How It Works</h2>
-            <h3 className="display-3 mb-8 px-xl-6">Download the app, create your profile and <span className="text-accent1">voilà</span>, you're all set!</h3>
++           <h3 className="display-3 mb-8 px-xl-6">Découvrez comment Mira transforme vos mots en <span className="text-accent1">données actionnables</span>.</h3>
           </div>
         </div>
         <div className="row">

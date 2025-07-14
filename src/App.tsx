@@ -29,7 +29,7 @@ const App: React.FC = () => {
         />
         <meta name="author" content="elemis" />
         <title>Sandbox - Modern & Multipurpose Bootstrap 5 Template</title>
-        <link rel="shortcut icon" href="/assets/img/favicon.png" />
+        <link rel="shortcut icon" href="/assets/img/miraquery.png" />
         <link rel="stylesheet" href="/assets/css/plugins.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
         <link rel="stylesheet" href="/assets/css/colors/custom-palette.css" />

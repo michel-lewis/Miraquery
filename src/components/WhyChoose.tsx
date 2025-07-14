@@ -43,7 +43,7 @@ const WhyChoose: React.FC = () => {
         <div className="row d-flex align-items-start">
           <div className="col-lg-6 position-lg-sticky" style={{ top: '8rem' }}>
              <figure>
-              <img src="/assets/img/why.png" srcSet="/assets/img/why.png 2x" alt="Devices" />
+              <img src="/assets/img/why3.png" srcSet="/assets/img/why3.png 2x" alt="Devices" />
             </figure> 
           </div>
           <div className="col-lg-6 ms-auto">

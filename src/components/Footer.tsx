@@ -26,7 +26,7 @@ const Footer: React.FC<FooterProps> = ({ id }) => {
               Email: <a href="mailto:contact@korva.com" className="text-white">contact@korva.com</a><br />
               X: <a href="https://x.com/KorvaMira" className="text-white">@KorvaMira</a>
             </p>
-            <img src="/assets/img/miraquery-logo.png" alt="MiraQuery Logo" className="h-8" />
+            <img src="/assets/img/miraquery.png" alt="MiraQuery Logo" className="h-16" />
           </div>
         </div>
       </div>

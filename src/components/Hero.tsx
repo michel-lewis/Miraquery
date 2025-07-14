@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 // import bgImage from '/assets/img/photos/bg23.png'; // Adjust path based on your project structure
 import doodle1 from '/assets/img/svg/doodle1.svg';
@@ -27,6 +27,24 @@ const Hero: React.FC<sectionProps> = ({id}) => {
     hidden: { opacity: 0, y: -50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 1.8 } },
   };
+
+  const n = 5;
+  const cubeCount = n * n;
+  const terms = ['SQL', 'PostgreSQL', 'NoSQL', 'MongoDB', 'MySQL', 'Redis', 'MariaDB', 'Oracle', 'SQLite', 'Cassandra', 'Neo4j', 'Elasticsearch', 'Firebase', 'DynamoDB', 'CouchDB', 'Realm', 'InfluxDB', 'HBase', 'ArangoDB', 'RavenDB', 'Couchbase', 'OrientDB', 'Aerospike', 'BoltDB', 'LevelDB'];
+
+  const [animatedCubes, setAnimatedCubes] = useState<number[]>([]);
+
+  useEffect(() => {
+    const selectRandom = () => {
+      let indices = Array.from({ length: cubeCount }, (_, i) => i);
+      indices = indices.sort(() => Math.random() - 0.5);
+      setAnimatedCubes(indices.slice(0, 3));
+    };
+
+    selectRandom();
+    const interval = setInterval(selectRandom, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
@@ -95,11 +113,92 @@ const Hero: React.FC<sectionProps> = ({id}) => {
           </div>
           <motion.div
             className="col-lg-6 ms-auto mb-n20 mb-xxl-n22"
+            style={{ marginTop: '-10rem' }}
             variants={slideInDown}
             initial="hidden"
             animate="visible"
           >
-        
+            <div className="d-flex align-items-center justify-content-center">
+              <div className="hero-animation">
+                <style>{`
+                  .hero-animation .grid {
+                    display: grid;
+                    grid-template-columns: repeat(var(--n), var(--l));
+                    grid-gap: .5em;
+                    place-self: center;
+                    transform: rotateX(55deg) rotate(45deg);
+                    transform-style: preserve-3d;
+                  }
+                  .hero-animation .cube {
+                    aspect-ratio: 1;
+                    transform-origin: 50% 50% calc(-1 * var(--l));
+                    background: #f0f0f0;
+                    position: relative;
+                    transform-style: preserve-3d;
+                    transform: scale3d(1, 1, 0);
+                    border: 1px solid #ddd;
+                  }
+                  .hero-animation .cube.animated {
+                    background: #f0f8ff;
+                    border-radius: 10;
+                    animation: ani 6s ease-in-out forwards;
+                  }
+                  .hero-animation .cube::before,
+                  .hero-animation .cube::after {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    content: attr(data-text);
+                    --ii: 0;
+                    --jj: calc(1 - var(--ii));
+                    transform-origin: calc(var(--jj) * 50%) calc(var(--ii) * 50%);
+                    transform: translate(calc(var(--ii) * 100%), calc(var(--jj) * 100%)) rotate3d(var(--jj), var(--ii), 0, calc((2 * var(--ii) - 1) * 90deg));
+                    background: #e0e0e0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #333;
+                    font-size: 0.6em;
+                    font-weight: bold;
+                  }
+                  .hero-animation .cube.animated::before,
+                  .hero-animation .cube.animated::after {
+                    background: color-mix(in hsl, #007bff calc(var(--ii) * 100%), #add8e6);
+                    color: #fff;
+                  }
+                  .hero-animation .cube::after {
+                    --ii: 1;
+                  }
+                  @keyframes ani {
+                    0% {
+                      transform: scale3d(1, 1, 0);
+                    }
+                    10% {
+                      transform: scale3d(1, 1, 1.2);
+                    }
+                    80% {
+                      transform: scale3d(1, 1, 1.2);
+                    }
+                    100% {
+                      transform: scale3d(1, 1, 0);
+                    }
+                  }
+                `}</style>
+                <div className="grid" style={{ '--n': n, '--l': '4.5em', '--t': '6s' }}>
+                  {Array.from({ length: cubeCount }).map((_, index) => {
+                    const i = index % n;
+                    const j = Math.floor(index / n);
+                    const isAnimated = animatedCubes.includes(index);
+                    const order = isAnimated ? animatedCubes.indexOf(index) : -1;
+                    const delay = order * 2;
+                    const animationStyle = isAnimated ? { animationDelay: `${delay}s` } : {};
+                    const className = `cube ${isAnimated ? 'animated' : ''}`;
+                    const term = terms[index % terms.length];
+                    return <div key={index} className={className} style={{ '--i': i, '--j': j, ...animationStyle }} data-text={term} />;
+                  })}
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
