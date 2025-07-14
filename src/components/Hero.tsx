@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 // import bgImage from '/assets/img/photos/bg23.png'; // Adjust path based on your project structure
 import doodle1 from '/assets/img/svg/doodle1.svg';
 import doodle2 from '/assets/img/svg/doodle2.svg';
-import appStoreButton from '/assets/img/photos/button-appstore.svg';
-import googlePlayButton from '/assets/img/photos/button-google-play.svg';
+// import appStoreButton from '/assets/img/photos/button-appstore.svg';
+// import googlePlayButton from '/assets/img/photos/button-google-play.svg';
 // import devicesImage from '/assets/img/photos/devices3.png';
 // import devicesImage2x from '/assets/img/photos/devices3@2x.png';
 import type { sectionProps } from '../types/common';
@@ -99,16 +99,8 @@ const Hero: React.FC<sectionProps> = ({id}) => {
               initial="hidden"
               animate="visible"
             >
-              <span>
-                <a href="#" className="me-2">
-                  <img src={appStoreButton} className="h-11 rounded-xl" alt="" />
-                </a>
-              </span>
-              <span>
-                <a href="#">
-                  <img src={googlePlayButton} className="h-11 rounded-xl" alt="" />
-                </a>
-              </span>
+              <a href="#" className="btn btn-primary me-2">Tester Mira</a>
+              <a href="#" className="btn btn-secondary">Parler à un expert</a>
             </motion.div>
           </div>
           <motion.div
