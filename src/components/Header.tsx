@@ -102,8 +102,8 @@ const Header: React.FC = () => {
                 <li className="nav-item">
                   <a
                     className="nav-link"
-                    href="#footer"
-                    onClick={(e) => handleNavClick(e, 'footer')}
+                    href="#contact"
+                    onClick={(e) => handleNavClick(e, 'contact')}
                     data-bs-dismiss="offcanvas"
                   >
                     Contact

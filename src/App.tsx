@@ -53,8 +53,9 @@ const App: React.FC = () => {
         <HowItWorks id="how-it-works" />
         <WhyChoose />
         <Testimonials />
-        <Contact />
         <Pricing id="pricing" />
+        <Contact id="contact" />
+
         <Faq id="faq" />
         <Footer />
 

@@ -1,9 +1,11 @@
 import React from 'react';
-import type { sectionProps } from '../types/common';
 
-const Contact: React.FC = () => {
+interface ContactProps {
+  id?: string;
+}
+const Contact: React.FC<ContactProps> = ({ id }) => {
   return (
-    <section className="wrapper bg-light-bg">
+    <section id={id} className="wrapper bg-light-bg">
       <div className="container pt-18 pt-md-20 pb-14 pb-md-16">
         <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center justify-content-center"> {/* Ajout de justify-content-center ici */}
           <div className="col-lg-5 position-relative ">
