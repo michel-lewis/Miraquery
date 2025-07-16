@@ -23,30 +23,30 @@ const features: Feature[] = [
   },
   {
     number: '2',
-    title: 'Multi-Database Versatility',
-    description: 'Unlike tools that focus on a single database type, MiraQuery seamlessly supports both PostgreSQL and MongoDB. This unified approach means you can manage diverse data environments without switching tools.',
-    caseExample: 'A developer asks: "List active users."',
-    result: 'MiraQuery produces: db.users.find({ status: \'active\' });',
-    additionalPoint: 'Intelligent Schema Introspection: MiraQuery automatically introspects and caches your database schema in JSON, ensuring accurate and efficient query generation without costly re-scans.',
+    title: 'Advanced Schema and Query Optimization',
+    description: 'MiraQuery offers multi-database versatility with seamless support for PostgreSQL and MongoDB, combined with AI-driven query optimization. It introspects, caches schemas in JSON, and generates lightweight, high-performance queries to ensure efficiency across diverse data environments.',
+    caseExample: 'A user runs frequent analytical queries like "Sales by region" on a complex schema.',
+    result: 'MiraQuery introspects the schema and optimizes: SELECT region, SUM(sales) FROM orders GROUP BY region; caching results for instant access without re-scans.',
+    additionalPoint: 'Intelligent Efficiency: Automatic schema introspection and Redis caching reduce latency and costs, enabling surpuissant queries that are both powerful and lightweight.',
     icon: 'database'
   },
   {
     number: '3',
-    title: 'Extreme Performance',
-    description: 'Experience lightning-fast data access with MiraQuery\'s optimized architecture, designed for minimal latency and maximum efficiency.',
-    caseExample: 'An enterprise executes 1,000 identical queries daily.',
-    result: 'MiraQuery serves 95% of these via cache, saving significant time and API costs.',
-    additionalPoint: 'Sub-50ms Latency: Our integrated Redis cache (ioredis) dramatically reduces query response times, serving frequent requests in less than 50 milliseconds.',
-    icon: 'rocket'
+    title: 'Streamlined Developer Experience',
+    description: 'Built on a robust, 100% TypeScript backend, MiraQuery offers a smooth and secure integration experience, functioning as an API and ORM-like tool for developers to easily incorporate natural language querying into applications.',
+    caseExample: 'A developer integrates MiraQuery into a Node.js app as an API or ORM substitute.',
+    result: 'Code: const mira = require(\'@korva/mira\'); mira.query(\'List products in stock\');',
+    additionalPoint: 'Developer-Friendly API: Access via a clean REST API (POST /query) with Zod validation and NeverThrow error handling, simplifying ORM-style interactions without full ORM overhead.',
+    icon: 'code'
   },
   {
     number: '4',
-    title: 'Streamlined Developer Experience',
-    description: 'Built on a robust, 100% TypeScript backend, MiraQuery offers a smooth and secure integration experience for developers.',
-    caseExample: 'A developer integrates MiraQuery into a Node.js app.',
-    result: 'Code: const mira = require(\'@korva/mira\'); mira.query(\'List products in stock\');',
-    additionalPoint: 'Developer-Friendly API: Access MiraQuery\'s power via a clean REST API (POST /query), featuring Zod for robust input validation and NeverThrow for typed error handling.',
-    icon: 'code'
+    title: 'Comprehensive Logging and Monitoring',
+    description: 'MiraQuery provides built-in logging and monitoring to track queries, performance, and optimizations, with integrated caching for efficiency. Logs are stored in MongoDB for easy auditing and insights.',
+    caseExample: 'A team reviews query performance and caching after a high-traffic day.',
+    result: 'MiraQuery logs reveal: Query ID: 123, Execution Time: 45ms, Status: Success, Cached: Yes, with optimization suggestions.',
+    additionalPoint: 'Actionable Insights: Analyze logs to identify bottlenecks, improve efficiency, and leverage caching, with future dashboards for real-time monitoring.',
+    icon: 'chart-bar'
   }
 ];
 
