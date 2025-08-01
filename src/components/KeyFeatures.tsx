@@ -1,3 +1,4 @@
+
 import React from 'react';
 import type { sectionProps } from '../types/common';
 
@@ -14,39 +15,39 @@ interface Feature {
 const features: Feature[] = [
   {
     number: '1',
-    title: 'Intuitive AI-Powered Conversion',
-    description: 'MiraQuery uses advanced AI to transform natural language into precise SQL or MongoDB queries. Our exclusive integration with xAI\'s Grok API ensures high accuracy and contextual understanding, making complex database interactions as simple as typing a sentence.',
-    caseExample: 'A small business asks: "Which clients purchased in 2025?"',
-    result: 'MiraQuery generates: SELECT * FROM clients WHERE purchase_date >= \'2025-01-01\';',
-    additionalPoint: 'Contextual Understanding: MiraQuery captures the full context of your request, going far beyond basic keyword matching to deliver highly relevant results.',
+    title: 'AI-Powered Natural Language Querying',
+    description: 'Mira transforms natural language into precise SQL or MongoDB queries using xAI\'s Grok API. Its interpreter simplifies complex database interactions, making data access intuitive for all users, from beginners to experts.',
+    caseExample: 'A manager asks: "Show me all orders from 2025."',
+    result: 'Mira generates: SELECT * FROM orders WHERE order_date >= \'2025-01-01\';',
+    additionalPoint: 'Contextual Accuracy: Mira understands query intent with high precision, ensuring reliable results without manual query crafting.',
     icon: 'brain'
   },
   {
     number: '2',
-    title: 'Advanced Schema and Query Optimization',
-    description: 'MiraQuery offers multi-database versatility with seamless support for PostgreSQL and MongoDB, combined with AI-driven query optimization. It introspects, caches schemas in JSON, and generates lightweight, high-performance queries to ensure efficiency across diverse data environments.',
-    caseExample: 'A user runs frequent analytical queries like "Sales by region" on a complex schema.',
-    result: 'MiraQuery introspects the schema and optimizes: SELECT region, SUM(sales) FROM orders GROUP BY region; caching results for instant access without re-scans.',
-    additionalPoint: 'Intelligent Efficiency: Automatic schema introspection and Redis caching reduce latency and costs, enabling surpuissant queries that are both powerful and lightweight.',
+    title: 'Multi-Database Support & Optimization',
+    description: 'Mira supports PostgreSQL and MongoDB with AI-driven schema creation, query optimization, and caching. It introspects schemas, optimizes database structures, and caches results in Redis for sub-50ms latency.',
+    caseExample: 'A retailer queries: "Sales by product category this year."',
+    result: 'Mira optimizes: SELECT category, SUM(sales) FROM orders GROUP BY category; with cached results for instant access.',
+    additionalPoint: 'Performance Boost: Automatic schema generation and query optimization reduce database load and improve response times.',
     icon: 'database'
   },
   {
     number: '3',
-    title: 'Streamlined Developer Experience',
-    description: 'Built on a robust, 100% TypeScript backend, MiraQuery offers a smooth and secure integration experience, functioning as an API and ORM-like tool for developers to easily incorporate natural language querying into applications.',
-    caseExample: 'A developer integrates MiraQuery into a Node.js app as an API or ORM substitute.',
-    result: 'Code: const mira = require(\'@korva/mira\'); mira.query(\'List products in stock\');',
-    additionalPoint: 'Developer-Friendly API: Access via a clean REST API (POST /query) with Zod validation and NeverThrow error handling, simplifying ORM-style interactions without full ORM overhead.',
+    title: 'Developer-Friendly APIs & ORM Integration',
+    description: 'Mira offers simple and enriched REST APIs (internal/external) and an ORM-like SDK (@korva/mira) for seamless integration. Developers can query databases in natural language or use structured APIs with Zod validation and NeverThrow error handling.',
+    caseExample: 'A developer integrates Mira into a web app.',
+    result: 'Code: import mira from \'@korva/mira\'; mira.query(\'List active users\');',
+    additionalPoint: 'Flexibility: Public database support and ORM-like APIs simplify integration while maintaining security and scalability.',
     icon: 'code'
   },
   {
     number: '4',
-    title: 'Comprehensive Logging and Monitoring',
-    description: 'MiraQuery provides built-in logging and monitoring to track queries, performance, and optimizations, with integrated caching for efficiency. Logs are stored in MongoDB for easy auditing and insights.',
-    caseExample: 'A team reviews query performance and caching after a high-traffic day.',
-    result: 'MiraQuery logs reveal: Query ID: 123, Execution Time: 45ms, Status: Success, Cached: Yes, with optimization suggestions.',
-    additionalPoint: 'Actionable Insights: Analyze logs to identify bottlenecks, improve efficiency, and leverage caching, with future dashboards for real-time monitoring.',
-    icon: 'chart-bar'
+    title: 'Robust Monitoring, Security & Caching',
+    description: 'Mira provides comprehensive logging, monitoring, and caching with MongoDB logs and Redis cache. It ensures secure query execution with validated inputs and offers insights into performance and usage patterns.',
+    caseExample: 'An admin checks query performance after a peak usage period.',
+    result: 'Logs show: Query ID: 456, Time: 42ms, Status: Cached, Security: Validated.',
+    additionalPoint: 'Proactive Insights: Real-time monitoring and security features protect data while optimizing performance with intelligent caching.',
+    icon: 'log'
   }
 ];
 

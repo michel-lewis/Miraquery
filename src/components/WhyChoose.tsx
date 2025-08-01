@@ -10,7 +10,7 @@ interface Reason {
 const reasons: Reason[] = [
   { icon: 'brain', title: 'AI-Powered Precision with Grok', description: 'Mira harnesses xAI\'s Grok API for unparalleled accuracy in query generation, intelligently interpreting natural language for precise SQL or MongoDB queries.', bg: '#00C4CC' },
   { icon: 'database', title: 'Unmatched Versatility: SQL & NoSQL', description: 'Seamlessly handle PostgreSQL and MongoDB with Mira\'s multi-database support, featuring schema introspection for accurate query generation.', bg: '#FFC107' },
-  { icon: 'bolt', title: 'Blazing Fast Performance & Cost Efficiency', description: 'Enjoy sub-50ms latency with Redis caching and optimized Grok API usage, plus efficient connection pooling for resource optimization.', bg: '#76FF03' },
+  { icon: 'rocket', title: 'Blazing Fast Performance & Cost Efficiency', description: 'Enjoy sub-50ms latency with Redis caching and optimized Grok API usage, plus efficient connection pooling for resource optimization.', bg: '#76FF03' },
   { icon: 'code', title: 'Built for Developers (TypeScript Stack)', description: 'Leverage a 100% TypeScript stack with Fastify, Zod, and NeverThrow for robust, developer-friendly integration via the @korva/mira SDK.', bg: '#424242' },
   { icon: 'cloud', title: 'Flexible Deployment & Scalability', description: 'Choose SaaS, API, or on-premise Docker deployment with a modular DDD architecture that scales from SMEs to enterprises.', bg: '#00C4CC' },
   { icon: 'vision', title: 'A Vision for the Future', description: 'Future-proof with Data Warehouse integration, a supercharged chatbot, vector databases, and monitoring features planned on our roadmap.', bg: '#FFC107' },
