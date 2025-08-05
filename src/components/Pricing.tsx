@@ -52,7 +52,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
   const { t } = useTranslation();
   return (
     <section id={id} className="wrapper bg-light-bg">
-      <div className="container py-16 py-md-18">
+      <div className="container py-16">
         <div className="row text-center">
           <div className="col-lg-10 mx-auto">
             <h2 className="fs-16 text-uppercase text-muted mb-3">{t('pricing.subtitle')}</h2>
@@ -69,7 +69,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                           padding: 5,
                           backgroundColor: plan.backgroundColor,
                           color: plan.textColor,
-                          borderRadius: 10
+                          borderRadius: 10,
                         }}
                       >
                         {t(`pricing.${plan.key}.title`)}
@@ -85,16 +85,26 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                         </div>
                       )}
                       <ul className="icon-list bullet-bg bullet-soft-secondary mt-7 mb-8 text-start">
-                        {(t(`pricing.${plan.key}.features`, { returnObjects: true }) as string[]).map((feature: string, i: number) => (
-                          <li key={i} className={`mb-2 fs-16 font-space`}>
-                            <i className="uil uil-check"></i>
-                            {feature}
-                          </li>
-                        ))}
+                        {(t(`pricing.${plan.key}.features`, { returnObjects: true }) as string[]).map(
+                          (feature: string, i: number) => (
+                            <li key={i} className={`mb-2 fs-16 font-space`}>
+                              <i className="uil uil-check"></i>
+                              {feature}
+                            </li>
+                          )
+                        )}
                       </ul>
                       <a
                         href={plan.ctaLink}
                         className={`btn btn-soft-secondary rounded-pill ${plan.ctaClass}`}
+                        style={{
+                          whiteSpace: 'normal',
+                          wordWrap: 'break-word',
+                          maxWidth: '100%',
+                          padding: '0.5rem 1rem',
+                          lineHeight: '1.2',
+                          textAlign: 'center',
+                        }}
                       >
                         {t(`pricing.${plan.key}.cta_text`)}
                       </a>

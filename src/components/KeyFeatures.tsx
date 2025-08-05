@@ -35,7 +35,7 @@ const KeyFeatures: React.FC<sectionProps> = ({id}) => {
   const { t } = useTranslation();
   return (
     <section id={id} className="wrapper bg-light-bg">
-      <div className="container py-14 py-md-16">
+      <div className="container py-14 ">
         <div className="row text-center">
           <div className="col-md-10 col-lg-8 mx-auto position-relative">
             <img

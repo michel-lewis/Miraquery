@@ -35,7 +35,7 @@ const HowItWorks: React.FC<sectionProps> = ({id}) => {
   const { t } = useTranslation();
   return (
     <section id={id} className="wrapper bg-light-bg">
-      <div className="container pb-14 pb-md-16">
+      <div className="container pb-14 ">
         <div className="row text-center">
           <div className="col-md-10 col-lg-7 mx-auto position-relative">
             <img src="/assets/img/svg/doodle5.svg" className="w-15 position-absolute d-none d-lg-block" style={{ right: '10%' }} alt="Doodle" />

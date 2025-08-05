@@ -20,7 +20,7 @@ const WhyChoose: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section className="wrapper bg-light">
-      <div className="container py-16 py-md-18">
+      <div className="container py-16">
         <div className="row text-center">
           <div className="col-md-11 col-lg-9 col-xl-8 col-xxl-7 mx-auto position-relative">
             <img

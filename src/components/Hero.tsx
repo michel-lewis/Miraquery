@@ -116,8 +116,8 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
             />
             <p className="lead fs-17 lh-sm mb-7 mt-6">{t('hero.lead')}</p>
             <div className="d-flex justify-content-center justify-content-lg-start button-container">
-              <a href="#" className="btn btn-primary me-2">{t('hero.button_test_mira')}</a>
-              <a href="#" className="btn btn-secondary">{t('hero.button_talk_expert')}</a>
+              <a href="#contact" className="btn btn-primary me-2">{t('hero.button_test_mira')}</a>
+              <a href="#contact" className="btn btn-secondary">{t('hero.button_talk_expert')}</a>
             </div>
           </div>
           <div className="col-lg-6 ms-auto mb-n20 mb-xxl-n22 vanta-container" style={{ marginTop: '-10rem' }}>
@@ -127,57 +127,6 @@ const Hero: React.FC<sectionProps> = ({ id }) => {
           </div>
         </div>
       </div>
-      <style>{`
-        .text-container {
-          min-height: 400px; /* Fixed minimum height to prevent vertical resizing */
-          max-width: 600px; /* Fixed maximum width to prevent horizontal expansion */
-          width: 100%; /* Ensure it takes full available width up to max-width */
-          display: flex;
-          flex-direction: column;
-          justify-content: center; /* Center content vertically */
-        }
-        .text-container h1 {
-          white-space: normal; /* Allow wrapping for heading */
-          overflow: hidden; /* Hide overflow text */
-          text-overflow: ellipsis; /* Add ellipsis for overflow */
-          max-height: 200px; /* Limit heading height */
-        }
-        .text-container p.lead {
-          white-space: normal; /* Allow wrapping for lead text */
-          overflow: hidden; /* Hide overflow text */
-          text-overflow: ellipsis; /* Add ellipsis for overflow */
-          max-height: 100px; /* Limit lead text height */
-        }
-        .button-container {
-          min-height: 60px; /* Fixed height for button container */
-          display: flex;
-          align-items: center; /* Center buttons vertically */
-        }
-        .vanta-container {
-          min-height: 400px; /* Match text-container height for balance */
-          max-width: 600px; /* Fixed maximum width for Vanta side */
-          width: 100%; /* Ensure it takes full available width up to max-width */
-        }
-        @media (max-width: 991.98px) {
-          .text-container {
-            max-width: 100%; /* Full width on mobile */
-            min-height: 300px; /* Reduced height for mobile */
-            text-align: center; /* Ensure text remains centered */
-          }
-          .text-container h1 {
-            font-size: 2.5rem; /* Adjust font size for mobile */
-            max-height: 150px; /* Reduced height for mobile */
-          }
-          .text-container p.lead {
-            font-size: 1rem; /* Adjust font size for mobile */
-            max-height: 80px; /* Reduced height for mobile */
-          }
-          .vanta-container {
-            max-width: 100%; /* Full width on mobile */
-            min-height: 300px; /* Match text-container height */
-          }
-        }
-      `}</style>
     </section>
   );
 };

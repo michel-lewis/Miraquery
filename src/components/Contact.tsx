@@ -9,43 +9,92 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
   const { t } = useTranslation();
 
   return (
-    <section id={id} className="wrapper bg-light-bg">
-      <div className="container pt-18 pt-md-20 pb-14 pb-md-16">
-        <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center justify-content-center">
-          <div className="col-lg-5 position-relative">
-            <img
-              src="/assets/img/svg/doodle3.svg"
-              className="h-11 position-absolute d-none d-lg-block"
-              style={{ top: '-45%', left: '23%' }}
-              alt="Doodle 3"
-            />
-            <img
-              src="/assets/img/svg/doodle4.svg"
-              className="h-8 position-absolute d-none d-lg-block"
-              style={{ top: '6%', right: '2%' }}
-              alt="Doodle 4"
-            />
-            <h2 className="fs-16 text-uppercase text-muted mb-3">{t('contact.subtitle')}</h2>
-            <h3 className="display-3 mb-4 text-primary">{t('contact.heading')}</h3>
-            <p
-              className="lead mb-4 text-neutral"
-              dangerouslySetInnerHTML={{ __html: t('contact.lead') }}
-            />
-            <p className="mb-4 text-neutral">{t('contact.description')}</p>
-            <a href="#" className="btn btn-primary rounded-pill shadow-sm">
-              {t('contact.button_contact_us')}
-            </a>
-          </div>
-          <div className="col-lg-7 order-lg-4 text-center">
-            <figure>
+    <section id={id} className="wrapper bg-light">
+      <div className="container py-14 pt-lg-16 pb-lg-0">
+        <div className="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
+          <div className="col-lg-6 col-xl-5 position-relative d-none d-lg-block">
+            <div
+              className="shape rounded-circle bg-soft-primary rellax w-21 h-21"
+              data-rellax-speed="1"
+              style={{ top: '8rem', left: '2rem' }}
+            ></div>
+            <figure className="ps-xxl-10">
               <img
                 className="w-100 d-block mx-auto"
                 src="/assets/img/contact.png"
                 srcSet="/assets/img/contact.png 2x"
-                alt={t('contact.image_alt', 'Contact Illustration')}
+                alt={t('contact.image_alt', 'Illustration de contact')}
                 style={{ maxWidth: '600px' }}
               />
             </figure>
+          </div>
+          <div className="col-lg-6 col-xl-5 offset-xl-1">
+            <h2 className="display-4 mb-3">{t('contact.heading', 'Prenez contact')}</h2>
+            <p className="lead mb-8 pe-xl-10">
+              {t('contact.lead', 'Vous avez des questions ? Contactez-nous via notre formulaire et nous vous répondrons rapidement.')}
+              <span className="text-decoration-underline text-accent">
+                {' '}
+                {t('contact.trusted', 'Fait confiance par plus de 5 000 clients')}{' '}
+              </span>
+              {t('contact.over', 'Rejoignez-les en utilisant nos services et développez votre entreprise.')}
+            </p>
+            <form
+              className="contact-form needs-validation"
+              method="post"
+              action="#"
+              noValidate
+            >
+              <div className="messages"></div>
+              <div className="form-floating mb-4">
+                <input
+                  id="form_name2"
+                  type="text"
+                  name="name"
+                  className="form-control"
+                  placeholder={t('contact.form.name_placeholder', 'Jane')}
+                  required
+                  data-error={t('contact.form.name_error', 'Le nom est requis.')}
+                />
+                <label htmlFor="form_name2">{t('contact.form.name_label', 'Nom *')}</label>
+                <div className="valid-feedback">{t('contact.form.valid_feedback', 'C\'est parfait !')}</div>
+                <div className="invalid-feedback">{t('contact.form.name_invalid', 'Veuillez entrer votre nom.')}</div>
+              </div>
+              <div className="form-floating mb-4">
+                <input
+                  id="form_email2"
+                  type="email"
+                  name="email"
+                  className="form-control"
+                  placeholder={t('contact.form.email_placeholder', 'jane.doe@exemple.com')}
+                  required
+                  data-error={t('contact.form.email_error', 'Un email valide est requis.')}
+                />
+                <label htmlFor="form_email2">{t('contact.form.email_label', 'Email *')}</label>
+                <div className="valid-feedback">{t('contact.form.valid_feedback', 'C\'est parfait !')}</div>
+                <div className="invalid-feedback">{t('contact.form.email_invalid', 'Veuillez fournir une adresse email valide.')}</div>
+              </div>
+              <div className="form-floating mb-4">
+                <textarea
+                  id="form_message2"
+                  name="message"
+                  className="form-control"
+                  placeholder={t('contact.form.message_placeholder', 'Votre message')}
+                  style={{ height: '150px' }}
+                  required
+                ></textarea>
+                <label htmlFor="form_message2">{t('contact.form.message_label', 'Message *')}</label>
+                <div className="valid-feedback">{t('contact.form.valid_feedback', 'C\'est parfait !')}</div>
+                <div className="invalid-feedback">{t('contact.form.message_invalid', 'Veuillez entrer votre message.')}</div>
+              </div>
+              <input
+                type="submit"
+                className="btn btn-primary rounded-pill btn-send mb-3"
+                value={t('contact.form.submit_button', 'Envoyer le message')}
+              />
+              <p className="text-muted">
+                <strong>*</strong> {t('contact.form.required_fields', 'Ces champs sont requis.')}
+              </p>
+            </form>
           </div>
         </div>
       </div>

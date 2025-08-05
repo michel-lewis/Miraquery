@@ -247,11 +247,27 @@
     "logo_alt": "Logo MiraQuery"
   },
   "contact": {
-    "subtitle": "Contactez-nous",
-    "heading": "Parlons-en",
-    "lead": "Créons quelque chose de grand ensemble. Nous sommes <span className=\"text-decoration-underline text-accent\">de confiance pour plus de 5000 clients</span>. Rejoignez-les en utilisant nos services et développez votre activité.",
-    "description": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
-    "button_contact_us": "Nous contacter"
+    "image_alt": "Illustration de contact",
+    "heading": "Prenez contact",
+    "lead": "Vous avez des questions ? Contactez-nous via notre formulaire et nous vous répondrons rapidement.",
+    "trusted": "Fait confiance par plus de 5 000 clients",
+    "over": "Rejoignez-les en utilisant nos services et développez votre entreprise.",
+    "form": {
+      "name_placeholder": "Jane",
+      "name_label": "Nom *",
+      "name_error": "Le nom est requis.",
+      "name_invalid": "Veuillez entrer votre nom.",
+      "email_placeholder": "jane.doe@exemple.com",
+      "email_label": "Email *",
+      "email_error": "Un email valide est requis.",
+      "email_invalid": "Veuillez fournir une adresse email valide.",
+      "message_placeholder": "Votre message",
+      "message_label": "Message *",
+      "message_invalid": "Veuillez entrer votre message.",
+      "valid_feedback": "C'est parfait !",
+      "submit_button": "Envoyer le message",
+      "required_fields": "Ces champs sont requis."
+    }
   },
   "faq": {
     "subtitle": "Foire Aux Questions",
