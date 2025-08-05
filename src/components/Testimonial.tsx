@@ -1,22 +1,22 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Testimonial {
-  name: string;
-  role: string;
-  quote: string;
+  key: string;
   bg: string;
 }
 
 const testimonials: Testimonial[] = [
-  { name: 'Coriss Ambady', role: 'Financial Analyst', quote: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque penatibus.', bg: 'bg-soft-grape' },
-  { name: 'Cory Zamora', role: 'Marketing Specialist', quote: 'Fusce dapibus, tellus ac cursus tortor mauris condimentum fermentum massa justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.', bg: 'bg-soft-green' },
-  { name: 'Nikolas Brooten', role: 'Sales Manager', quote: 'Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget porta ac consectetur vestibulum. Donec sed odio dui consectetur adipiscing elit.', bg: 'bg-soft-orange' },
-  { name: 'Coriss Ambady', role: 'Financial Analyst', quote: 'Etiam adipiscing tincidunt elit convallis felis suscipit ut. Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam tincidunt at at sapien. Aenean tortor libero condimentum ac laoreet vitae.', bg: 'bg-soft-pink' },
-  { name: 'Jackie Sanders', role: 'Investment Planner', quote: 'Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus magnis dis montes, nascetur ridiculus mus. Donec sed odio dui. Nulla vitae elit libero a pharetra.', bg: 'bg-soft-blue' },
-  { name: 'Laura Widerski', role: 'Sales Specialist', quote: 'Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', bg: 'bg-soft-yellow' },
+  { key: 'coriss_ambady_1', bg: 'bg-soft-grape' },
+  { key: 'cory_zamora', bg: 'bg-soft-green' },
+  { key: 'nikolas_brooten', bg: 'bg-soft-orange' },
+  { key: 'coriss_ambady_2', bg: 'bg-soft-pink' },
+  { key: 'jackie_sanders', bg: 'bg-soft-blue' },
+  { key: 'laura_widerski', bg: 'bg-soft-yellow' },
 ];
 
 const Testimonials: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className="wrapper bg-light">
       <div className="container">
@@ -25,8 +25,11 @@ const Testimonials: React.FC = () => {
             <img src="./src/assets/img/svg/doodle1.svg" className="h-9 position-absolute d-none d-lg-block" style={{ top: '2%', left: '9%' }} alt="" />
             <img src="./src/assets/img/svg/doodle10.svg" className="h-7 position-absolute d-none d-lg-block" style={{ top: '-45%', left: '-17%' }} alt="" />
             <img src="./src/assets/img/svg/doodle11.svg" className="h-13 position-absolute d-none d-lg-block" style={{ top: '-40%', right: '-15%' }} alt="" />
-            <h2 className="fs-16 text-uppercase text-muted mb-3">Happy Customers</h2>
-            <h3 className="display-3 mb-11 px-xl-10 px-xxl-13">Don't take our word for it. See what <span className="text-gradient gradient-7">customers</span> are saying about us.</h3>
+            <h2 className="fs-16 text-uppercase text-muted mb-3">{t('testimonials.subtitle')}</h2>
+            <h3
+              className="display-3 mb-11 px-xl-10 px-xxl-13"
+              dangerouslySetInnerHTML={{ __html: t('testimonials.heading') }}
+            />
           </div>
         </div>
         <div className="grid mb-12">
@@ -36,11 +39,11 @@ const Testimonials: React.FC = () => {
                 <div className={`card shadow-none rounded-xl ${testimonial.bg}`}>
                   <div className="card-body">
                     <blockquote className="icon mb-0">
-                      <p>“{testimonial.quote}”</p>
+                      <p>“{t(`testimonials.${testimonial.key}.quote`)}”</p>
                       <div className="blockquote-details">
                         <div className="info ps-0">
-                          <h5 className="mb-1">{testimonial.name}</h5>
-                          <p className="mb-0">{testimonial.role}</p>
+                          <h5 className="mb-1">{t(`testimonials.${testimonial.key}.name`)}</h5>
+                          <p className="mb-0">{t(`testimonials.${testimonial.key}.role`)}</p>
                         </div>
                       </div>
                     </blockquote>

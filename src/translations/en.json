@@ -1,0 +1,302 @@
+{
+  "navbar": {
+    "home": "Home",
+    "problem_solution": "Problem & Solution",
+    "key_features": "Key Features",
+    "pricing": "Pricing",
+    "contact": "Contact"
+  },
+  "offcanvas": {
+    "title": "MiraQuery",
+    "description": "MiraQuery transforms natural language into SQL and MongoDB queries using Grok's AI, making data access simple and fast for everyone.",
+    "contact_info": {
+      "title": "Contact Info",
+      "address_line1": "Moonshine St. 14/05",
+      "address_line2": "Light City, London",
+      "email": "contact@korva.com",
+      "phone": "00 (123) 456 78 90"
+    },
+    "learn_more": {
+      "title": "Learn More",
+      "problem_solution": "Problem & Solution",
+      "key_features": "Key Features",
+      "pricing": "Pricing",
+      "contact_us": "Contact Us"
+    },
+    "follow_us": {
+      "title": "Follow Us"
+    }
+  },
+  "hero": {
+    "heading": "Transform your data with <span className=\"text-gradient gradient-7\">Mira AI</span>",
+    "lead": "Mira converts your natural language queries into SQL or MongoDB commands instantly.",
+    "button_test_mira": "Test Mira",
+    "button_talk_expert": "Talk to an Expert"
+  },
+  "features": {
+    "subtitle": "App Features",
+    "heading": "Sandbox makes your spending <span className=\"text-secondary\">stress-free</span> for you to have the perfect control.",
+    "always_up_to_date": "Always up to Date",
+    "easy_usage": "Easy Usage",
+    "secure_payments": "Secure Payments",
+    "fast_transactions": "Fast Transactions",
+    "reports_forecasting": "Reports & Forecasting",
+    "online_banking": "Online Banking",
+    "configurable_fields": "Configurable Fields",
+    "list_of_transactions": "List of Transactions"
+  },
+  "problem_solution": {
+    "subtitle": "Data accessible to everyone",
+    "heading": "From <span className=\"text-gradient gradient-7\">complexity</span> to <span className=\"text-gradient gradient-7\">simplicity</span>",
+    "problem_title": "Problem",
+    "problem_description": "SQL and MongoDB queries are complex, reserved for experts, and slow down your analyses. <span className=\"fw-bold\"> Simplify your process now.</span>",
+    "solution_title": "Solution",
+    "solution_description": "MiraQuery translates your sentences into precise queries using AI, without needing technical skills. <span className=\"fw-bold\"> Access your data with one click.</span>",
+    "versatile": "Versatile: SQL and NoSQL.",
+    "fast": "Fast: Results in 50 ms.",
+    "intuitive": "Intuitive: API and SDK for developers.",
+    "button_discover_features": "Discover the features"
+  },
+  "key_features": {
+    "subtitle": "Key Features",
+    "heading": "MiraQuery combines powerful AI with a robust, developer-friendly architecture to make data access <span className=\"text-accent1\">effortless</span> and <span className=\"text-accent1\">universal</span>.",
+    "lead": "Discover how it transforms your daily data interactions!",
+    "example": "Example:",
+    "case": "Case:",
+    "result": "Result:",
+    "ai_powered": {
+      "title": "AI-Powered Natural Language Querying",
+      "description": "Mira transforms natural language into precise SQL or MongoDB queries using xAI's Grok API. Its interpreter simplifies complex database interactions, making data access intuitive for all users, from beginners to experts.",
+      "case_example": "A manager asks: \"Show me all orders from 2025.\"",
+      "result": "Mira generates: SELECT * FROM orders WHERE order_date >= '2025-01-01';",
+      "additional_point": "Contextual Accuracy: Mira understands query intent with high precision, ensuring reliable results without manual query crafting."
+    },
+    "multi_database": {
+      "title": "Multi-Database Support & Optimization",
+      "description": "Mira supports PostgreSQL and MongoDB with AI-driven schema creation, query optimization, and caching. It introspects schemas, optimizes database structures, and caches results in Redis for sub-50ms latency.",
+      "case_example": "A retailer queries: \"Sales by product category this year.\"",
+      "result": "Mira optimizes: SELECT category, SUM(sales) FROM orders GROUP BY category; with cached results for instant access.",
+      "additional_point": "Performance Boost: Automatic schema generation and query optimization reduce database load and improve response times."
+    },
+    "developer_friendly": {
+      "title": "Developer-Friendly APIs & ORM Integration",
+      "description": "Mira offers simple and enriched REST APIs (internal/external) and an ORM-like SDK (@korva/mira) for seamless integration. Developers can query databases in natural language or use structured APIs with Zod validation and NeverThrow error handling.",
+      "case_example": "A developer integrates Mira into a web app.",
+      "result": "Code: import mira from '@korva/mira'; mira.query('List active users');",
+      "additional_point": "Flexibility: Public database support and ORM-like APIs simplify integration while maintaining security and scalability."
+    },
+    "robust_monitoring": {
+      "title": "Robust Monitoring, Security & Caching",
+      "description": "Mira provides comprehensive logging, monitoring, and caching with MongoDB logs and Redis cache. It ensures secure query execution with validated inputs and offers insights into performance and usage patterns.",
+      "case_example": "An admin checks query performance after a peak usage period.",
+      "result": "Logs show: Query ID: 456, Time: 42ms, Status: Cached, Security: Validated.",
+      "additional_point": "Proactive Insights: Real-time monitoring and security features protect data while optimizing performance with intelligent caching."
+    },
+    "button_test_now": "Test Now"
+  },
+  "how_it_works": {
+    "subtitle": "How It Works",
+    "heading": "Discover how Mira transforms your words into <span className=\"text-accent1\">actionable data</span>.",
+    "input_query": {
+      "title": "Input Your Query in Plain Language",
+      "description": "Start by typing a natural language request. Mira’s AI, powered by xAI’s Grok API, interprets your intent, capturing context to prepare for query generation.",
+      "case_example": "A user types: \"Find all customers who bought in 2025.\"",
+      "result": "Mira parses: Intent = select customers, condition = purchase year 2025.",
+      "additional_point": "Effortless Start: No need for technical query knowledge—just describe what you want."
+    },
+    "analyze_schema": {
+      "title": "Analyze and Optimize Database Schema",
+      "description": "Mira introspects your database (PostgreSQL or MongoDB), creates or caches an optimized schema in JSON, and prepares an efficient query plan tailored to your data structure.",
+      "case_example": "Mira processes the request on a sales database.",
+      "result": "Mira caches: { table: \"customers\", columns: [\"id\", \"purchase_date\"] } and optimizes query structure.",
+      "additional_point": "Smart Setup: Schema creation and optimization ensure fast, accurate query generation."
+    },
+    "generate_queries": {
+      "title": "Generate and Execute Secure Queries",
+      "description": "Mira converts the request into a secure SQL or MongoDB query, validates inputs, executes it, and caches results in Redis for instant future access, with logs stored in MongoDB.",
+      "case_example": "Mira executes the customer query.",
+      "result": "Mira runs: SELECT * FROM customers WHERE purchase_date >= '2025-01-01'; caches result, logs: Query ID: 101, Time: 45ms.",
+      "additional_point": "Safe & Fast: Security checks and caching deliver reliable results with sub-50ms latency."
+    },
+    "deliver_results": {
+      "title": "Deliver Results via API or App",
+      "description": "Mira returns query results through a REST API (POST /query) or ORM-like SDK (@korva/mira), enabling seamless integration into apps or direct access via the SaaS platform.",
+      "case_example": "A developer retrieves results in a web app.",
+      "result": "Code: import mira from '@korva/mira'; const data = await mira.query('Find all customers who bought in 2025');",
+      "additional_point": "Flexible Output: Supports internal/external APIs and public databases for versatile use."
+    }
+  },
+  "why_choose": {
+    "subtitle": "Why Choose Us?",
+    "heading": "Here are a few <span className=\"text-secondary\">reasons why</span> Mira is your top choice for data solutions.",
+    "ai_precision": {
+      "title": "AI-Powered Precision with Grok",
+      "description": "Mira harnesses xAI's Grok API for unparalleled accuracy in query generation, intelligently interpreting natural language for precise SQL or MongoDB queries."
+    },
+    "versatility": {
+      "title": "Unmatched Versatility: SQL & NoSQL",
+      "description": "Seamlessly handle PostgreSQL and MongoDB with Mira's multi-database support, featuring schema introspection for accurate query generation."
+    },
+    "performance": {
+      "title": "Blazing Fast Performance & Cost Efficiency",
+      "description": "Enjoy sub-50ms latency with Redis caching and optimized Grok API usage, plus efficient connection pooling for resource optimization."
+    },
+    "developer_friendly": {
+      "title": "Built for Developers (TypeScript Stack)",
+      "description": "Leverage a 100% TypeScript stack with Fastify, Zod, and NeverThrow for robust, developer-friendly integration via the @korva/mira SDK."
+    },
+    "deployment": {
+      "title": "Flexible Deployment & Scalability",
+      "description": "Choose SaaS, API, or on-premise Docker deployment with a modular DDD architecture that scales from SMEs to enterprises."
+    },
+    "vision": {
+      "title": "A Vision for the Future",
+      "description": "Future-proof with Data Warehouse integration, a supercharged chatbot, vector databases, and monitoring features planned on our roadmap."
+    }
+  },
+  "testimonials": {
+    "subtitle": "Happy Customers",
+    "heading": "Don't take our word for it. See what <span className=\"text-gradient gradient-7\">customers</span> are saying about us.",
+    "coriss_ambady_1": {
+      "name": "Coriss Ambady",
+      "role": "Financial Analyst",
+      "quote": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque penatibus."
+    },
+    "cory_zamora": {
+      "name": "Cory Zamora",
+      "role": "Marketing Specialist",
+      "quote": "Fusce dapibus, tellus ac cursus tortor mauris condimentum fermentum massa justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur."
+    },
+    "nikolas_brooten": {
+      "name": "Nikolas Brooten",
+      "role": "Sales Manager",
+      "quote": "Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget porta ac consectetur vestibulum. Donec sed odio dui consectetur adipiscing elit."
+    },
+    "coriss_ambady_2": {
+      "name": "Coriss Ambady",
+      "role": "Financial Analyst",
+      "quote": "Etiam adipiscing tincidunt elit convallis felis suscipit ut. Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam tincidunt at at sapien. Aenean tortor libero condimentum ac laoreet vitae."
+    },
+    "jackie_sanders": {
+      "name": "Jackie Sanders",
+      "role": "Investment Planner",
+      "quote": "Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus magnis dis montes, nascetur ridiculus mus. Donec sed odio dui. Nulla vitae elit libero a pharetra."
+    },
+    "laura_widerski": {
+      "name": "Laura Widerski",
+      "role": "Sales Specialist",
+      "quote": "Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    }
+  },
+  "pricing": {
+    "subtitle": "Pricing",
+    "heading": "A plan for every need",
+    "duration_month": "month",
+    "free": {
+      "title": "Free",
+      "features": [
+        "10 queries/month",
+        "Basic API access",
+        "Community support",
+        "Single user"
+      ],
+      "cta_text": "Start Free"
+    },
+    "freemium": {
+      "title": "Freemium",
+      "features": [
+        "50 queries/month",
+        "Basic API access",
+        "Email support",
+        "Up to 2 users"
+      ],
+      "cta_text": "Start Free"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "features": [
+        "Unlimited queries",
+        "On-premise deployment",
+        "Dedicated support",
+        "Unlimited users",
+        "Custom integrations"
+      ],
+      "cta_text": "Contact Us"
+    },
+    "custom": {
+      "title": "Custom",
+      "features": [
+        "Tailored query limits",
+        "Custom deployment options",
+        "Dedicated account manager",
+        "Custom feature development",
+        "SLA guarantees"
+      ],
+      "cta_text": "Contact Us"
+    }
+  },
+  "footer": {
+    "heading": "Ready to revolutionize your data?",
+    "faq": "FAQ",
+    "terms": "Terms",
+    "get_started": "Get Started",
+    "contact": "Contact",
+    "contact_header": "Contact",
+    "email_label": "Email",
+    "x_label": "X",
+    "logo_alt": "MiraQuery Logo"
+  },
+  "contact": {
+    "subtitle": "Get in Touch",
+    "heading": "Let's Talk",
+    "lead": "Let's create something great together. We are <span className=\"text-decoration-underline text-accent\">trusted by over 5000 clients</span>. Join them by using our services and grow your business.",
+    "description": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+    "button_contact_us": "Contact Us"
+  },
+  "faq": {
+    "subtitle": "Frequently Asked Questions",
+    "heading": "Do you have questions about <span className=\"text-accent1\">MiraQuery</span>? We have the answers!",
+    "items": [
+      {
+        "question": "What is MiraQuery?",
+        "answer": "MiraQuery is a TypeScript backend engine that transforms your natural language queries into executable SQL or MongoDB commands. It uses xAI's Grok API to understand and generate these queries, simplifying access and analysis of your data for everyone."
+      },
+      {
+        "question": "Which databases does MiraQuery support?",
+        "answer": "Currently, MiraQuery supports PostgreSQL and MongoDB. We use official and lightweight drivers for these two databases, with schema introspection to ensure generated queries are precise and adapted to your data structure."
+      },
+      {
+        "question": "What AI technology does MiraQuery use?",
+        "answer": "MiraQuery relies exclusively on xAI's Grok API for artificial intelligence. This allows us to delegate computational load and benefit from Grok's advanced capabilities for precise natural language to query conversion."
+      },
+      {
+        "question": "Is MiraQuery fast?",
+        "answer": "Yes, MiraQuery is designed for performance. Thanks to a Redis cache (ioredis), results from frequent queries are served in less than 50 ms. Additionally, connection pools managed by underlying Node.js drivers help reduce latency."
+      },
+      {
+        "question": "How does MiraQuery ensure security and robustness?",
+        "answer": "MiraQuery is built on a 100% TypeScript stack, ensuring robustness and strict typing. We use Zod for typed and secure input validation, and NeverThrow for robust and predictable error management."
+      },
+      {
+        "question": "How can I integrate MiraQuery into my application?",
+        "answer": "MiraQuery offers several integration options: a powerful REST API (POST /query route), an npm package @korva/mira (client-side SDK) to simplify API calls, and Swagger/OpenAPI documentation with an interactive UI interface (/docs) to facilitate testing and API exploration."
+      },
+      {
+        "question": "Can I deploy MiraQuery on my own servers (On-Premise)?",
+        "answer": "Absolutely! In addition to the SaaS platform and API service, MiraQuery offers a containerized version via Docker (with Helm charts) for companies with strict security and compliance requirements."
+      },
+      {
+        "question": "Is there a free version of MiraQuery?",
+        "answer": "Yes, we offer a Freemium tier that allows you to perform up to 50 queries per month for free. This gives you the opportunity to test MiraQuery and discover its power before upgrading to a paid plan."
+      },
+      {
+        "question": "What future features are planned for MiraQuery?",
+        "answer": "We plan a data warehouse for analytical queries, an integrated chatbot (Slack, Teams, WhatsApp), integration of vector databases (e.g., Milvus), a Model Context Protocol (MCP), custom prompts, query pipelines, and monitoring tools with intelligent recommendations."
+      },
+      {
+        "question": "How does MiraQuery differ from other Text2SQL tools?",
+        "answer": "MiraQuery stands out with its versatility (SQL and NoSQL), developer-oriented approach (TypeScript stack, npm SDK, Swagger), superior performance thanks to Redis cache, and robust architecture. Our ecosystem vision with ambitious future plans (DW, chatbot, vector bases) makes it a complete and scalable solution."
+      }
+    ]
+  }
+}

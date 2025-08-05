@@ -1,8 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import type { sectionProps } from '../types/common';
 
+interface Benefit {
+  key: string;
+}
+
+const benefits: Benefit[] = [
+  { key: 'versatile' },
+  { key: 'fast' },
+  { key: 'intuitive' },
+];
+
 const ProblemSolution: React.FC<sectionProps> = ({ id }) => {
+  const { t } = useTranslation();
   const slideInRight = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.5 } },
@@ -18,8 +30,11 @@ const ProblemSolution: React.FC<sectionProps> = ({ id }) => {
       <div className="container py-14 py-md-16">
         <div className="row text-center mb-8">
           <div className="col-md-11 col-lg-9 col-xl-8 col-xxl-7 mx-auto position-relative">
-            <h2 className="fs-16 text-uppercase text-muted mb-3">Des données accessibles à tous</h2>
-            <h3 className="display-4 mb-5">De la <span className="text-gradient gradient-7">complexité</span> à la <span className="text-gradient gradient-7">simplicité</span></h3>
+            <h2 className="fs-16 text-uppercase text-muted mb-3">{t('problem_solution.subtitle')}</h2>
+            <h3
+              className="display-4 mb-5"
+              dangerouslySetInnerHTML={{ __html: t('problem_solution.heading') }}
+            />
           </div>
         </div>
         
@@ -33,22 +48,21 @@ const ProblemSolution: React.FC<sectionProps> = ({ id }) => {
           >
             <div className="card shadow-lg h-100">
               <div className="card-body p-10 p-xl-12 d-flex flex-column">
-                <h3 className="fs-22 mb-3">Problème</h3>
+                <h3 className="fs-22 mb-3">{t('problem_solution.problem_title')}</h3>
                 <div className="" style={{ width: '100%', height: '300px', overflow: 'hidden' }}>
                   <img 
                     src="/assets/img/subquery_2b.svg" 
-                    alt="Problème" 
+                    alt={t('problem_solution.problem_title')} 
                     style={{ 
                       width: '100%', 
                       height: '100%', 
                     }} 
                   />
                 </div>
-                <p className="mb-6">
-         
-                  Les requêtes SQL et MongoDB sont complexes, réservées aux experts, et freinent vos analyses.
-                  <span className="fw-bold"> Simplifiez votre processus dès maintenant.</span>
-                </p>
+                <p
+                  className="mb-6"
+                  dangerouslySetInnerHTML={{ __html: t('problem_solution.problem_description') }}
+                />
               </div>
             </div>
           </motion.div>
@@ -63,17 +77,17 @@ const ProblemSolution: React.FC<sectionProps> = ({ id }) => {
             <div className="card shadow-lg h-100">
               <div className="card-body p-10 p-xl-12 d-flex flex-column">
            
-                <h3 className="fs-22 mb-3">Solution</h3>
-                <p className="mb-6">
-                  MiraQuery traduit vos phrases en requêtes précises grâce à l'IA, sans besoin de compétences techniques.
-                  <span className="fw-bold"> Accédez à vos données en un clic.</span>
-                </p>
+                <h3 className="fs-22 mb-3">{t('problem_solution.solution_title')}</h3>
+                <p
+                  className="mb-6"
+                  dangerouslySetInnerHTML={{ __html: t('problem_solution.solution_description') }}
+                />
                 <ul className="icon-list bullet-bg bullet-soft-primary">
-                  <li><span className="bullet"></span><span>Polyvalent : SQL et NoSQL.</span></li>
-                  <li><span className="bullet"></span><span>Rapide : Résultats en 50 ms.</span></li>
-                  <li><span className="bullet"></span><span>Intuitif : API et SDK pour développeurs.</span></li>
+                  {benefits.map((benefit, index) => (
+                    <li key={index}><span className="bullet"></span><span>{t(`problem_solution.${benefit.key}`)}</span></li>
+                  ))}
                 </ul>
-                <a href="#features" className="btn btn-primary rounded-pill mt-6">Découvrir les fonctionnalités</a>
+                <a href="#features" className="btn btn-primary rounded-pill mt-6">{t('problem_solution.button_discover_features')}</a>
               </div>
             </div>
           </motion.div>
