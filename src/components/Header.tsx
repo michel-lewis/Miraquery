@@ -315,7 +315,7 @@ const Header: React.FC = () => {
         .navbar-nav .nav-link:hover,
         .navbar-other .nav-link:hover,
         .dropdown-item:hover {
-          color: #3b82f6 !important;
+          color: #00C4CC !important;
           background-color: transparent !important;
         }
         .dropdown-menu {

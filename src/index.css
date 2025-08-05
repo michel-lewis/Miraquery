@@ -37425,6 +37425,7 @@ img.svg-inject {
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   display: flex;
@@ -39773,6 +39774,12 @@ footer.bg-dark.angled.upper-start:before {
 .uil-check {
   color: #3b82f6;
   font-size: 1.2rem;
+}
+
+.btn-behavior {
+  background-color: #3b82f6;
+  color: white;
+  scroll-behavior: smooth;
 }
 
 

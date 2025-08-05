@@ -10,8 +10,8 @@ i18next
       en: { translation: en },
       fr: { translation: fr },
     },
-    lng: "fr", 
-    fallbackLng: "fr",
+    lng: "en", 
+    fallbackLng: "en",
     interpolation: {
       escapeValue: false,
     },

@@ -87,7 +87,7 @@ const ProblemSolution: React.FC<sectionProps> = ({ id }) => {
                     <li key={index}><span className="bullet"></span><span>{t(`problem_solution.${benefit.key}`)}</span></li>
                   ))}
                 </ul>
-                <a href="#features" className="btn btn-primary rounded-pill mt-6">{t('problem_solution.button_discover_features')}</a>
+                <a href="#key-features" className="btn btn-primary rounded-pill mt-6 btn-behavior">{t('problem_solution.button_discover_features')}</a>
               </div>
             </div>
           </motion.div>
