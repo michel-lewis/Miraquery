@@ -55,7 +55,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                   required
                   data-error={t('contact.form.name_error', 'Le nom est requis.')}
                 />
-                <label htmlFor="form_name2">{t('contact.form.name_label', 'Nom *')}</label>
+                <label htmlFor="form_name2">{t('contact.form.name_label')}</label>
                 <div className="valid-feedback">{t('contact.form.valid_feedback', 'C\'est parfait !')}</div>
                 <div className="invalid-feedback">{t('contact.form.name_invalid', 'Veuillez entrer votre nom.')}</div>
               </div>

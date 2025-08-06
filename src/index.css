@@ -50463,6 +50463,9 @@ footer.bg-dark.angled.upper-start:before {
   width: 100%;
   /* Ensure it takes full available width up to max-width */
 }
+.bg-slate-gray {
+  background-color: #2D3748; /* Dark slate gray, soft and modern */
+}
 
 @media (max-width: 991.98px) {
   .text-container {
@@ -50494,4 +50497,6 @@ footer.bg-dark.angled.upper-start:before {
     min-height: 300px;
     /* Match text-container height */
   }
+
+
 }

@@ -35,7 +35,7 @@
   },
   "features": {
     "subtitle": "App Features",
-    "heading": "Sandbox makes your spending <span className=\"text-secondary\">stress-free</span> for you to have the perfect control.",
+    "heading": "Mira makes your spending <span className=\"text-secondary\">stress-free</span> for you to have the perfect control.",
     "always_up_to_date": "Always up to Date",
     "easy_usage": "Easy Usage",
     "secure_payments": "Secure Payments",
@@ -244,7 +244,25 @@
     "contact_header": "Contact",
     "email_label": "Email",
     "x_label": "X",
-    "logo_alt": "MiraQuery Logo"
+    "logo_alt": "MiraQuery Logo",
+    "join_community": "Join our community by using our services and grow your business.",
+    "try_free": "Try It For Free",
+    "copyright": "© 2024 Nanodev.",
+    "all_rights_reserved": "All rights reserved.",
+    "get_in_touch": "Get in Touch",
+    "address": "Moonshine St. 14/05 Light City, London, United Kingdom",
+    "email": "info@email.com",
+    "phone": "00 (123) 456 78 90",
+    "learn_more": "Learn More",
+    "about_us": "About Us",
+    "our_story": "Our Story",
+    "projects": "Projects",
+    "terms_of_use": "Terms of Use",
+    "privacy_policy": "Privacy Policy",
+    "our_newsletter": "Our Newsletter",
+    "subscribe_newsletter": "Subscribe to our newsletter to get our news & deals delivered to you.",
+    "email_address": "Email Address",
+    "join": "Join"
   },
 
   "contact": {
