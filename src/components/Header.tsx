@@ -52,26 +52,29 @@ const LanguageSelector: React.FC = () => {
 
   return (
     <li className="nav-item dropdown language-select text-uppercase">
-        <button className="faq-question" onClick={() => toggleItem(language)}>
-          <span>{language.toUpperCase()}</span>
-          <svg
-            className={`arrow-icon ${openItemId === language ? "rotated" : ""}`}
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-      <ul className="dropdown-menu">
+      <button className="faq-question" onClick={() => toggleItem(language)}>
+        <span>{language.toUpperCase()}</span>
+        <svg
+          className={`arrow-icon ${openItemId === language ? "rotated" : ""}`}
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      <ul
+        className={`dropdown-menu ${openItemId === language ? "show" : ""}`}
+        data-bs-display="static"
+      >
         {languages.map(({ code }, index) => (
           <li className="nav-item" key={index}>
             <a
@@ -126,14 +129,23 @@ const Header: React.FC = () => {
           </div>
           <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
             <div className="offcanvas-header d-lg-none">
-              <h3 className="text-black fs-30 mb-0">{t("offcanvas.title")}</h3>
+              <a href="./index.html" className="navbar-brand">
+                <img
+                  src="/assets/img/miraquery.png"
+                  srcSet="/assets/img/miraquery.png 2x"
+                  alt="Logo"
+                  style={{ maxHeight: "3rem" }}
+                />
+              </a>
               <button
                 type="button"
                 className="btn-close btn-close-dark"
+                style={{ marginTop: "-1rem" }}
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               ></button>
             </div>
+
             <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100 text-black">
               <ul className="navbar-nav">
                 <li className="nav-item">
@@ -187,18 +199,21 @@ const Header: React.FC = () => {
                   </a>
                 </li>
               </ul>
-              <div className="offcanvas-footer d-lg-none">
+              <div
+                className="offcanvas-footer d-lg-none"
+                style={{ color: "var(--bs-gray-300)" }}
+              >
                 <div>
                   <a href="mailto:contact@korva.com" className="link-inverse">
                     {t("offcanvas.contact_info.email")}
                   </a>
                   <br /> {t("offcanvas.contact_info.phone")} <br />
-                  <nav className="nav social social-black mt-4">
-                    {socialItems.map((social, index) => (
+                  <nav className="nav social social-white mt-4">
+                    {/* {socialItems.map((social, index) => (
                       <a href={social.url} key={index}>
                         <i className={`uil uil-${social.icon}`}></i>
                       </a>
-                    ))}
+                    ))} */}
                   </nav>
                 </div>
               </div>
@@ -209,9 +224,28 @@ const Header: React.FC = () => {
               <LanguageSelector />
 
               <li className="nav-item d-lg-none">
-                <button className="hamburger offcanvas-nav-btn">
+                <button
+                  className="hamburger offcanvas-nav-btn"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target=".offcanvas-nav"
+                  aria-controls="offcanvasNav"
+                >
                   <span></span>
                 </button>
+
+                {/* <button
+                  className="hamburger offcanvas-nav-btn"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvas-info"
+                  aria-controls="offcanvas-info"
+                  onClick={() => {
+                    alert("clicked");
+                  }}
+                >
+                  <span></span>
+                </button> */}
               </li>
             </ul>
           </div>
@@ -259,7 +293,9 @@ const Header: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#key-features">{t("offcanvas.learn_more.key_features")}</a>
+                <a href="#key-features">
+                  {t("offcanvas.learn_more.key_features")}
+                </a>
               </li>
               <li>
                 <a href="#pricing">{t("offcanvas.learn_more.pricing")}</a>
@@ -300,6 +336,9 @@ const Header: React.FC = () => {
         .hamburger span::after {
           background-color: black !important;
         }
+        .offcanvas-footer .link-inverse{
+          color: var(--bs-gray-300) !important;
+        }
         .menucontainer {
           background-color: white;
           margin: 2rem auto;
@@ -336,8 +375,8 @@ const Header: React.FC = () => {
         }
         @media (max-width: 991.98px) {
           .menucontainer {
-            height: auto;
-            padding: 0.5rem;
+            height:3rem;
+            padding: 1rem;
           }
           .navbar-brand img {
             max-height: 2rem;
