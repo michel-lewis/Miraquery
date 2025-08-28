@@ -120,8 +120,8 @@ const Header: React.FC = () => {
           <div className="navbar-brand w-100">
             <a href="./index.html">
               <img
-                src="/assets/img/miraquery.png"
-                srcSet="/assets/img/miraquery.png 2x"
+                src="/assets/img/miraquery-icon.png"
+                srcSet="/assets/img/miraquery-icon.png 2x"
                 alt="Logo"
                 style={{ maxWidth: "150px" }}
               />
@@ -131,8 +131,8 @@ const Header: React.FC = () => {
             <div className="offcanvas-header d-lg-none">
               <a href="./index.html" className="navbar-brand">
                 <img
-                  src="/assets/img/miraquery.png"
-                  srcSet="/assets/img/miraquery.png 2x"
+                  src="/assets/img/miraquery-icon.png"
+                  srcSet="/assets/img/miraquery-icon.png 2x"
                   alt="Logo"
                   style={{ maxHeight: "3rem" }}
                 />
