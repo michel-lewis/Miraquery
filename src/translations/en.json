@@ -155,37 +155,37 @@
     }
   },
   "testimonials": {
-    "subtitle": "Happy Customers",
-    "heading": "Don't take our word for it. See what <span className=\"text-gradient gradient-7\">customers</span> are saying about us.",
+    "subtitle": "Happy Clients",
+    "heading": "Don't just take our word for it. See what our <span className=\"text-gradient gradient-7\">clients</span> are saying.",
     "coriss_ambady_1": {
       "name": "Coriss Ambady",
       "role": "Financial Analyst",
-      "quote": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque penatibus."
+      "quote": "Thanks to their expertise, we were able to optimize our investments and achieve excellent financial results. Their team understood our specific needs and provided tailored solutions that had a significant impact on our overall performance."
     },
     "cory_zamora": {
       "name": "Cory Zamora",
       "role": "Marketing Specialist",
-      "quote": "Fusce dapibus, tellus ac cursus tortor mauris condimentum fermentum massa justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur."
+      "quote": "Their team helped us improve our marketing strategy and successfully reach a wider audience. Their approach is both creative and analytical, which allowed us to better understand our customers and increase engagement substantially."
     },
     "nikolas_brooten": {
       "name": "Nikolas Brooten",
       "role": "Sales Manager",
-      "quote": "Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget porta ac consectetur vestibulum. Donec sed odio dui consectetur adipiscing elit."
+      "quote": "They transformed our sales process, increasing our efficiency and business performance. Their continuous support, along with the training provided to our team, was extremely helpful in achieving our quarterly goals."
     },
     "coriss_ambady_2": {
       "name": "Coriss Ambady",
       "role": "Financial Analyst",
-      "quote": "Etiam adipiscing tincidunt elit convallis felis suscipit ut. Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam tincidunt at at sapien. Aenean tortor libero condimentum ac laoreet vitae."
+      "quote": "Reliable service and accurate advice enabled us to make the best financial decisions. We particularly appreciated their responsiveness and ability to provide detailed, relevant analysis for every situation."
     },
     "jackie_sanders": {
       "name": "Jackie Sanders",
       "role": "Investment Planner",
-      "quote": "Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus magnis dis montes, nascetur ridiculus mus. Donec sed odio dui. Nulla vitae elit libero a pharetra."
+      "quote": "They guided us at every step, making financial planning simple and effective. Their team was always available to answer questions and help adjust strategies based on market changes."
     },
     "laura_widerski": {
       "name": "Laura Widerski",
       "role": "Sales Specialist",
-      "quote": "Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+      "quote": "The team is professional and always ready to help, which boosted our sales and customer satisfaction. Their structured methodology allowed us to better understand our clients and create offers that perfectly met their needs."
     }
   },
   "pricing": {
@@ -264,28 +264,27 @@
     "email_address": "Email Address",
     "join": "Join"
   },
-
   "contact": {
-    "image_alt": "Illustration de contact",
-    "heading": "Prenez contact",
-    "lead": "Vous avez des questions ? Contactez-nous via notre formulaire et nous vous répondrons rapidement.",
-    "trusted": "Fait confiance par plus de 5 000 clients",
-    "over": "Rejoignez-les en utilisant nos services et développez votre entreprise.",
+    "image_alt": "Contact illustration",
+    "heading": "Get in Touch",
+    "lead": "Have questions? Contact us through our form and we will respond quickly.",
+    "trusted": "Trusted by over 5,000 clients",
+    "over": "Join them by using our services and grow your business.",
     "form": {
       "name_placeholder": "Jane",
-      "name_label": "Nom *",
-      "name_error": "Le nom est requis.",
-      "name_invalid": "Veuillez entrer votre nom.",
-      "email_placeholder": "jane.doe@exemple.com",
+      "name_label": "Name *",
+      "name_error": "Name is required.",
+      "name_invalid": "Please enter your name.",
+      "email_placeholder": "jane.doe@example.com",
       "email_label": "Email *",
-      "email_error": "Un email valide est requis.",
-      "email_invalid": "Veuillez fournir une adresse email valide.",
-      "message_placeholder": "Votre message",
+      "email_error": "A valid email is required.",
+      "email_invalid": "Please provide a valid email address.",
+      "message_placeholder": "Your message",
       "message_label": "Message *",
-      "message_invalid": "Veuillez entrer votre message.",
-      "valid_feedback": "C'est parfait !",
-      "submit_button": "Envoyer le message",
-      "required_fields": "Ces champs sont requis."
+      "message_invalid": "Please enter your message.",
+      "valid_feedback": "Looks great!",
+      "submit_button": "Send Message",
+      "required_fields": "These fields are required."
     }
   },
   "faq": {
