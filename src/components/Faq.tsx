@@ -31,7 +31,7 @@ const FAQ: React.FC<sectionProps> = ({ id }) => {
     return (
       <div className={`faq-card ${isOpen ? "active" : ""}`} key={faq.id}>
         <button className="faq-question" onClick={() => toggleItem(faq.id)}>
-          <span>{faq.question}</span>
+          <span className={isOpen ? "text-black" : ""}>{faq.question}</span>
           <svg
             className={`arrow-icon ${isOpen ? "rotated" : ""}`}
             width="22"

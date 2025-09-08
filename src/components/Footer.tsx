@@ -25,7 +25,7 @@ const Footer: React.FC<FooterProps> = ({ id }) => {
               <img
                 className="mb-4"
                 src="/assets/img/miraquery-icon.png"
-                srcSet="/assets/img/miraquery-icon.png 2x"
+                srcSet="/assets/img/miraquery-icon.png 3x"
                 alt={t("footer.logo_alt")}
               />
               <p className="mb-4">

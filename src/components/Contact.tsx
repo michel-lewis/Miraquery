@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-
+import { useForm, ValidationError } from "@formspree/react";
+import { toast, ToastContainer } from "react-toastify";
 interface ContactProps {
   id?: string;
 }
 
 const Contact: React.FC<ContactProps> = ({ id }) => {
   const { t } = useTranslation();
+  const [state, handleSubmit] = useForm("xanddpgr");
+  const formRef = useRef<HTMLFormElement>(null);
 
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success(
+        t("contact.form.success", "Votre message a été envoyé avec succès !")
+      );
+      formRef.current?.reset();
+    }
+  }, [state.succeeded]);
   return (
     <section id={id} className="wrapper bg-light">
       <div className="container py-14 pt-lg-16 pb-lg-0">
@@ -21,8 +32,8 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
             <figure className="ps-xxl-10">
               <img
                 className="w-100 d-block mx-auto"
-                src="/assets/img/contact.png"
-                srcSet="/assets/img/contact.png 2x"
+                src="/assets/img/contact.svg"
+                srcSet="/assets/img/contact.svg 2x"
                 alt={t("contact.image_alt", "Illustration de contact")}
                 style={{ maxWidth: "600px" }}
               />
@@ -49,10 +60,11 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                 "Rejoignez-les en utilisant nos services et développez votre entreprise."
               )}
             </p>
+
             <form
-              className="contact-form needs-validation"
-              method="post"
-              action="#"
+              ref={formRef}
+              className="contact-form"
+              onSubmit={handleSubmit}
               noValidate
             >
               <div className="messages"></div>
@@ -64,21 +76,16 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                   className="form-control"
                   placeholder={t("contact.form.name_placeholder", "Jane")}
                   required
-                  data-error={t(
-                    "contact.form.name_error",
-                    "Le nom est requis."
-                  )}
                 />
                 <label htmlFor="form_name2">
                   {t("contact.form.name_label")}
                 </label>
-                <div className="valid-feedback">
-                  {t("contact.form.valid_feedback", "C'est parfait !")}
-                </div>
-                <div className="invalid-feedback">
-                  {t("contact.form.name_invalid", "Veuillez entrer votre nom.")}
-                </div>
               </div>
+              <ValidationError
+                prefix="Name"
+                field="name"
+                errors={state.errors}
+              />
               <div className="form-floating mb-4">
                 <input
                   id="form_email2"
@@ -90,24 +97,16 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                     "jane.doe@exemple.com"
                   )}
                   required
-                  data-error={t(
-                    "contact.form.email_error",
-                    "Un email valide est requis."
-                  )}
                 />
                 <label htmlFor="form_email2">
                   {t("contact.form.email_label", "Email *")}
                 </label>
-                <div className="valid-feedback">
-                  {t("contact.form.valid_feedback", "C'est parfait !")}
-                </div>
-                <div className="invalid-feedback">
-                  {t(
-                    "contact.form.email_invalid",
-                    "Veuillez fournir une adresse email valide."
-                  )}
-                </div>
-              </div>
+              </div>{" "}
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
               <div className="form-floating mb-4">
                 <textarea
                   id="form_message2"
@@ -123,21 +122,29 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                 <label htmlFor="form_message2">
                   {t("contact.form.message_label", "Message *")}
                 </label>
-                <div className="valid-feedback">
-                  {t("contact.form.valid_feedback", "C'est parfait !")}
-                </div>
-                <div className="invalid-feedback">
-                  {t(
-                    "contact.form.message_invalid",
-                    "Veuillez entrer votre message."
-                  )}
-                </div>
               </div>
-              <input
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+              <button
                 type="submit"
                 className="btn btn-primary rounded-pill btn-send mb-3"
-                value={t("contact.form.submit_button", "Envoyer le message")}
-              />
+                disabled={state.submitting}
+              >
+                {state.submitting ? (
+                  <>
+                    <span
+                      className="spinner-border spinner-border-sm me-2"
+                      role="status"
+                    />
+                    {t("contact.form.sending", "Envoi en cours...")}
+                  </>
+                ) : (
+                  t("contact.form.submit_button", "Envoyer le message")
+                )}
+              </button>
               <p className="text-muted">
                 <strong>*</strong>{" "}
                 {t("contact.form.required_fields", "Ces champs sont requis.")}
@@ -146,6 +153,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
           </div>
         </div>
       </div>
+      <ToastContainer position="top-right" autoClose={3000} />
     </section>
   );
 };

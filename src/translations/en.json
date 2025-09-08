@@ -160,32 +160,32 @@
     "coriss_ambady_1": {
       "name": "Coriss Ambady",
       "role": "Financial Analyst",
-      "quote": "Thanks to their expertise, we were able to optimize our investments and achieve excellent financial results. Their team understood our specific needs and provided tailored solutions that had a significant impact on our overall performance."
+      "quote": "Thanks to their expertise, we optimized our investments and achieved excellent results. Their team provided tailored solutions that had a strong impact on our performance."
     },
     "cory_zamora": {
       "name": "Cory Zamora",
       "role": "Marketing Specialist",
-      "quote": "Their team helped us improve our marketing strategy and successfully reach a wider audience. Their approach is both creative and analytical, which allowed us to better understand our customers and increase engagement substantially."
+      "quote": "Their team improved our marketing strategy and helped us reach a wider audience. Their creative and analytical approach increased customer engagement."
     },
     "nikolas_brooten": {
       "name": "Nikolas Brooten",
       "role": "Sales Manager",
-      "quote": "They transformed our sales process, increasing our efficiency and business performance. Their continuous support, along with the training provided to our team, was extremely helpful in achieving our quarterly goals."
+      "quote": "They transformed our sales process, boosting efficiency and business performance. The training and support provided were key to achieving our goals."
     },
     "coriss_ambady_2": {
       "name": "Coriss Ambady",
       "role": "Financial Analyst",
-      "quote": "Reliable service and accurate advice enabled us to make the best financial decisions. We particularly appreciated their responsiveness and ability to provide detailed, relevant analysis for every situation."
+      "quote": "Reliable service and accurate advice helped us make the best financial decisions. We appreciated their responsiveness and detailed analysis."
     },
     "jackie_sanders": {
       "name": "Jackie Sanders",
       "role": "Investment Planner",
-      "quote": "They guided us at every step, making financial planning simple and effective. Their team was always available to answer questions and help adjust strategies based on market changes."
+      "quote": "They guided us at every step, making financial planning simple and effective. Their team was always available and provided advice tailored to our needs."
     },
     "laura_widerski": {
       "name": "Laura Widerski",
       "role": "Sales Specialist",
-      "quote": "The team is professional and always ready to help, which boosted our sales and customer satisfaction. Their structured methodology allowed us to better understand our clients and create offers that perfectly met their needs."
+      "quote": "The team is professional and ready to help, which boosted our sales and customer satisfaction. Their structured methodology helped us create perfect offers."
     }
   },
   "pricing": {
@@ -284,7 +284,8 @@
       "message_invalid": "Please enter your message.",
       "valid_feedback": "Looks great!",
       "submit_button": "Send Message",
-      "required_fields": "These fields are required."
+      "required_fields": "These fields are required.",
+      "success": "Your message has been sent successfully!"
     }
   },
   "faq": {

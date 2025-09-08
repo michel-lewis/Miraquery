@@ -159,33 +159,33 @@
     "heading": "Ne nous croyez pas sur parole. Découvrez ce que les <span className=\"text-gradient gradient-7\">clients</span> disent de nous.",
     "coriss_ambady_1": {
       "name": "Coriss Ambady",
-      "role": "Analyste Financier",
-      "quote": "Grâce à leur expertise, nous avons optimisé nos investissements et obtenu d'excellents résultats financiers. Leur équipe a su comprendre nos besoins spécifiques et nous proposer des solutions adaptées qui ont eu un impact significatif sur notre performance globale."
+      "role": "Analyste financier",
+      "quote": "Grâce à leur expertise, nous avons optimisé nos investissements et obtenu d'excellents résultats."
     },
     "cory_zamora": {
       "name": "Cory Zamora",
-      "role": "Spécialiste Marketing",
-      "quote": "L'équipe nous a aidés à améliorer notre stratégie marketing et à toucher un public plus large avec succès. Leur approche est à la fois créative et analytique, ce qui nous a permis de mieux comprendre nos clients et d'augmenter notre engagement de manière notable."
+      "role": "Spécialiste marketing",
+      "quote": "Leur équipe a amélioré notre stratégie marketing et nous a aidés à toucher un public plus large."
     },
     "nikolas_brooten": {
       "name": "Nikolas Brooten",
-      "role": "Manager des Ventes",
-      "quote": "Ils ont transformé notre processus de vente, augmentant notre efficacité et nos performances commerciales. Leur accompagnement a été constant, et les formations fournies à notre équipe ont été extrêmement utiles pour atteindre nos objectifs trimestriels."
+      "role": "Responsable des ventes",
+      "quote": "Ils ont transformé notre processus de vente, améliorant l'efficacité et la performance globale."
     },
     "coriss_ambady_2": {
       "name": "Coriss Ambady",
-      "role": "Analyste Financier",
-      "quote": "Un service fiable et des conseils précis qui nous ont permis de prendre les meilleures décisions financières. Nous avons particulièrement apprécié leur réactivité et leur capacité à fournir des analyses détaillées et pertinentes pour chaque situation."
+      "role": "Analyste financier",
+      "quote": "Un service fiable et des conseils précis nous ont permis de prendre les meilleures décisions financières."
     },
     "jackie_sanders": {
       "name": "Jackie Sanders",
-      "role": "Planificateur d'Investissement",
-      "quote": "Ils nous ont guidés à chaque étape, rendant la planification financière simple et efficace. Leur équipe a toujours été disponible pour répondre à nos questions et nous aider à ajuster nos stratégies en fonction de l'évolution du marché."
+      "role": "Planificateur d'investissements",
+      "quote": "Ils nous ont guidés à chaque étape, rendant la planification financière simple et efficace. Leur équipe était toujours disponible et a fourni des conseils adaptés à nos besoins."
     },
     "laura_widerski": {
       "name": "Laura Widerski",
-      "role": "Spécialiste des Ventes",
-      "quote": "L'équipe est professionnelle et toujours prête à aider, ce qui a renforcé nos ventes et la satisfaction client. Leur méthodologie structurée nous a permis de mieux comprendre nos clients et de créer des offres plus adaptées à leurs besoins."
+      "role": "Spécialiste des ventes",
+      "quote": "L'équipe est professionnelle et prête à aider, ce qui a augmenté nos ventes et la satisfaction client."
     }
   },
   "pricing": {
@@ -284,7 +284,8 @@
       "message_invalid": "Veuillez entrer votre message.",
       "valid_feedback": "C'est parfait !",
       "submit_button": "Envoyer le message",
-      "required_fields": "Ces champs sont requis."
+      "required_fields": "Ces champs sont requis.",
+      "success": "Votre message a été envoyé avec succès !"
     }
   },
   "faq": {

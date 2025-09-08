@@ -51118,3 +51118,26 @@ footer.bg-dark.angled.upper-start:before {
     /* Match text-container height */
   }
 }
+
+.hover-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Swiper pagination */
+
+/* .swiper-pagination {
+  padding-top: 50rem !important; 
+} */
+
+.swiper-pagination-bullet-active {
+  background-color: var(--bs-primary) !important;
+}
+
+.swiper-wrapper {
+  margin-bottom: 2rem !important;
+}
