@@ -51128,12 +51128,6 @@ footer.bg-dark.angled.upper-start:before {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-/* Swiper pagination */
-
-/* .swiper-pagination {
-  padding-top: 50rem !important; 
-} */
-
 .swiper-pagination-bullet-active {
   background-color: var(--bs-primary) !important;
 }

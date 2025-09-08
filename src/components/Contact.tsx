@@ -32,8 +32,8 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
             <figure className="ps-xxl-10">
               <img
                 className="w-100 d-block mx-auto"
-                src="/assets/img/contact.svg"
-                srcSet="/assets/img/contact.svg 2x"
+                src="/assets/img/contact.png"
+                srcSet="/assets/img/contact.png 2x"
                 alt={t("contact.image_alt", "Illustration de contact")}
                 style={{ maxWidth: "600px" }}
               />
