@@ -48,7 +48,7 @@ const Testimonials: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section className="wrapper bg-light">
-      <div className="container">
+      <div className="container px-8">
         <div className="row">
           <div className="col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center position-relative">
             <img
